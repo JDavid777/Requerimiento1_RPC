@@ -5,14 +5,27 @@
  */
 
 #include "alertas.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 
+
+
+//funciones
+
+void ingresarDatosPaciente(Paciente *paciente);
+void comenzarLecturaSensores(Paciente *paciente);
+void menu(Paciente *paciente);
 void
 gestion_alertas_1(char *host)
 {
 	CLIENT *clnt;
 	bool_t  *result_1;
 	Paciente  enviarindicadores_1_arg;
+    
+    
+    menu(&enviarindicadores_1_arg);
 
 #ifndef	DEBUG
 	clnt = clnt_create (host, gestion_alertas, gestion_alertas_version, "udp");
@@ -30,6 +43,70 @@ gestion_alertas_1(char *host)
 	clnt_destroy (clnt);
 #endif	 /* DEBUG */
 }
+
+void menu(Paciente *paciente){
+	int opcion=0;
+	do{
+			
+			printf("\n  ======MENU=====   \n");
+			//opciones menu
+			printf("1. Ingresar datos del paciente\n");
+			printf("2. Comenzar lectura de los sensores");
+			printf("3. Terminar");
+			scanf("%d",&opcion); 	// leyendo opcion
+
+			switch (opcion)
+			{
+			case 1: ingresarDatosPaciente(paciente);
+				break;
+			case 2: comenzarLecturaSensores(paciente);
+				break;
+			default: printf("Opcion no valida.\n por favor ingresar una opcion correcta\n");
+			break;
+				
+			}
+
+			system("CLS");
+
+		
+	}
+	while(opcion!=3);
+
+	}
+
+void ingresarDatosPaciente(Paciente *paciente)
+{
+	system("CLS");
+	printf("\n-- INGRESANDO DATOS DEL PACIENTE --\n");
+
+	printf("\nNombres y Apellidos: ");
+	scanf("%s",&paciente->nombres);
+
+	printf("\nEdad: ");
+	scanf("%s",&paciente->edad);
+
+	printf("\nNumero Habitacion: ");
+	scanf("%s",&paciente->numHabitacion);
+
+}
+
+void comenzarLecturaSensores(Paciente *paciente){
+	srand48(getpid());
+	while(1){
+	 
+		paciente->indicadores.presionArterialDiastolica=rand()%(110-40+1) + 40;
+		paciente->indicadores.frecuenciaCardiaca=rand()%(200+1);
+		paciente->indicadores.frecuenciaRespiratoria=rand()%(60+1);
+	
+		paciente->indicadores.presionArterialSistolica==rand()%(160-50+1) + 50;
+		paciente->indicadores.saturacionOxigeno=rand()%(110-40+1) + 40;
+		paciente->indicadores.temperatura=drand48()*(44-33)+33;// numero aleatorio entre 33 y 44
+		sleep(1);
+	} 
+}
+
+
+
 
 
 int
