@@ -7,6 +7,35 @@
 #include "alertas.h"
 #include "notificaciones.h"
 
+
+void puntuacionDeLaAlerta(Paciente *paciente,AlertaGenerada *alerta);
+int obtenerGrupo(float edad){
+
+	if(edad<=0.06){
+		return 1;
+	}
+	if(edad<1){
+		return 2;
+	}
+	if(edad<2){
+		return 3;
+	}
+		if(edad<6){
+		return 4;
+	}
+		if(edad<13){
+		return 5;
+	}
+		if(edad<16){
+		return 6;
+	}
+		if(edad>=16){
+		return 7;
+	}
+	return -1;
+}
+
+
 bool_t *
 enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 {
@@ -15,7 +44,106 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 	CLIENT *clnt;
 	bool_t  *result_1;
 	AlertaGenerada  enviarnotificacion_2_arg;
+	
     char * dirIpServidorNotificaciones="localhost";
+
+	int grupo =obtenerGrupo((float)argp->edad); // TODO cambiar a float el int edad de la interfaz
+	int puntuacion=0;
+
+	//Saturacion de oxigeno es igual para todas las edades
+	if(argp->indicadores.saturacionOxigeno<90){
+		puntuacion++;
+	}
+
+	//DATOS PACIENTE
+	strcpy(enviarnotificacion_2_arg.paciente.nombres,argp->nombres);
+	enviarnotificacion_2_arg.paciente.edad=argp->edad;
+	enviarnotificacion_2_arg.paciente.numHabitacion=argp->numHabitacion;
+
+	//GENERANDO PUNTUACION 
+	switch (grupo)
+	{
+		case 1:
+			if(argp->indicadores.frecuenciaCardiaca<120 || 
+				argp->indicadores.frecuenciaCardiaca>140 ){
+				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
+				puntuacion++;
+			}
+
+			//TODO falta evaluar los demas indicadores
+			break;
+		case 2:
+			//evaluando para frecuencia cardiaca
+			if(argp->indicadores.frecuenciaCardiaca<100 || 
+				argp->indicadores.frecuenciaCardiaca>130 ){
+				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
+				puntuacion++;
+			}
+
+			break;
+		case 3:
+			//evaluando para frecuencia cardiaca
+			if(argp->indicadores.frecuenciaCardiaca<100 || 
+				argp->indicadores.frecuenciaCardiaca>120 ){
+				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
+				puntuacion++;
+			}
+			break;
+		case 4:
+			//evaluando para frecuencia cardiaca
+			if(argp->indicadores.frecuenciaCardiaca<80 || 
+				argp->indicadores.frecuenciaCardiaca>120 ){
+				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
+				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;				
+				puntuacion++;
+			}
+			break;
+		case 5:
+			//evaluando para frecuencia cardiaca
+			if(argp->indicadores.frecuenciaCardiaca<80 || 
+				argp->indicadores.frecuenciaCardiaca>100){
+				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;	
+				puntuacion++;
+			}
+			break;
+		case 6:
+			//evaluando para frecuencia cardiaca
+			if(argp->indicadores.frecuenciaCardiaca<70 || 
+				argp->indicadores.frecuenciaCardiaca>80){
+				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;				
+				puntuacion++;
+			}
+			break;
+		case 7:
+			//evaluando para frecuencia cardiaca
+			if(argp->indicadores.frecuenciaCardiaca<60 || 
+				argp->indicadores.frecuenciaCardiaca>80 ){
+				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;				
+				puntuacion++;
+			}
+			
+			break;
+		
+		default:
+			break;
+	}
+
+	//MENSAJE
+	if(puntuacion==2){
+		strcpy(enviarnotificacion_2_arg.mensaje,"Enviar una enfermera");
+	}else if(puntuacion>2){
+		strcpy(enviarnotificacion_2_arg.mensaje,"Enviar un medico y una enfermera");
+	}
+
+
+
 
 #ifndef	DEBUG
 	clnt = clnt_create (dirIpServidorNotificaciones, gestion_notificaciones, gestion_notificaiones_version, "udp");
@@ -24,14 +152,25 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 		exit (1);
 	}
 #endif	/* DEBUG */
+	// Generar alerta si hay mas de dos puntuciones
+	if(puntuacion>=2){
 
-	result_1 = enviarnotificacion_2(&enviarnotificacion_2_arg, clnt);
-	if (result_1 == (bool_t *) NULL) {
-		clnt_perror (clnt, "call failed");
+		//TODO ... Hay que guardar la informacion de la alerta en un archivo txt
+
+		
+		//TODO AGREGAR A ULTIMAS ALERTAS
+
+		result_1 = enviarnotificacion_2(&enviarnotificacion_2_arg, clnt);
+			
+		if (result_1 == (bool_t *) NULL) {
+			clnt_perror (clnt, "call failed");
+		}
 	}
+
 #ifndef	DEBUG
 	clnt_destroy (clnt);
 #endif	 /* DEBUG */
 
 	return &result;
 }
+

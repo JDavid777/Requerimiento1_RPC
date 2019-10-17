@@ -25,7 +25,8 @@ gestion_alertas_1(char *host)
 	Paciente  enviarindicadores_1_arg;
     
     
-    menu(&enviarindicadores_1_arg);
+    menu(&enviarindicadores_1_arg); //TODO falta Enviar al servidor los indicadores
+
 
 #ifndef	DEBUG
 	clnt = clnt_create (host, gestion_alertas, gestion_alertas_version, "udp");
@@ -57,9 +58,9 @@ void menu(Paciente *paciente){
 
 			switch (opcion)
 			{
-			case 1: ingresarDatosPaciente(paciente);
+			case 1: ingresarDatosPaciente(paciente); // pasar por referencia TODO
 				break;
-			case 2: comenzarLecturaSensores(paciente);
+			case 2: comenzarLecturaSensores(paciente); // pasar por referencia TODO
 				break;
 			default: printf("Opcion no valida.\n por favor ingresar una opcion correcta\n");
 			break;
@@ -101,7 +102,7 @@ void comenzarLecturaSensores(Paciente *paciente){
 		paciente->indicadores.presionArterialSistolica==rand()%(160-50+1) + 50;
 		paciente->indicadores.saturacionOxigeno=rand()%(110-40+1) + 40;
 		paciente->indicadores.temperatura=drand48()*(44-33)+33;// numero aleatorio entre 33 y 44
-		sleep(1);
+		sleep(5);
 	} 
 }
 
