@@ -48,7 +48,7 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
     char * dirIpServidorNotificaciones="localhost";
 
 	int grupo =obtenerGrupo((float)argp->edad); // TODO cambiar a float el int edad de la interfaz
-	int puntuacion=0;
+	int puntuacion=1;
 
 	//Saturacion de oxigeno es igual para todas las edades
 	if(argp->indicadores.saturacionOxigeno<90){
@@ -157,7 +157,7 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 
 		//TODO ... Hay que guardar la informacion de la alerta en un archivo txt
 
-		
+		printf("\n \n ENVIANDO ALERTA...");
 		//TODO AGREGAR A ULTIMAS ALERTAS
 
 		result_1 = enviarnotificacion_2(&enviarnotificacion_2_arg, clnt);

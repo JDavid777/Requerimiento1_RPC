@@ -47,12 +47,12 @@ gestion_alertas_1(char *host)
 
 void menu(Paciente *paciente){
 	int opcion=0;
-	do{
+	//do{
 			
 			printf("\n  ======MENU=====   \n");
 			//opciones menu
 			printf("1. Ingresar datos del paciente\n");
-			printf("2. Comenzar lectura de los sensores");
+			printf("2. Comenzar lectura de los sensores\n");
 			printf("3. Terminar");
 			scanf("%d",&opcion); 	// leyendo opcion
 
@@ -67,43 +67,45 @@ void menu(Paciente *paciente){
 				
 			}
 
-			system("CLS");
+			//TODO hacer limpiar consola
 
 		
 	}
-	while(opcion!=3);
+	//while(opcion!=3);
 
-	}
+	//}
 
 void ingresarDatosPaciente(Paciente *paciente)
 {
-	system("CLS");
+
 	printf("\n-- INGRESANDO DATOS DEL PACIENTE --\n");
 
 	printf("\nNombres y Apellidos: ");
 	scanf("%s",&paciente->nombres);
 
 	printf("\nEdad: ");
-	scanf("%s",&paciente->edad);
+	scanf("%d",&paciente->edad); //TODO cambiar la edad de int a float en la interfaz
 
 	printf("\nNumero Habitacion: ");
-	scanf("%s",&paciente->numHabitacion);
+	scanf("%d",&paciente->numHabitacion);
 
 }
 
 void comenzarLecturaSensores(Paciente *paciente){
 	srand48(getpid());
-	while(1){
+	//while(1){
 	 
-		paciente->indicadores.presionArterialDiastolica=rand()%(110-40+1) + 40;
-		paciente->indicadores.frecuenciaCardiaca=rand()%(200+1);
-		paciente->indicadores.frecuenciaRespiratoria=rand()%(60+1);
-	
-		paciente->indicadores.presionArterialSistolica==rand()%(160-50+1) + 50;
-		paciente->indicadores.saturacionOxigeno=rand()%(110-40+1) + 40;
-		paciente->indicadores.temperatura=drand48()*(44-33)+33;// numero aleatorio entre 33 y 44
+		//paciente->indicadores.presionArterialDiastolica=rand()%(110-40+1) + 40;
+		//paciente->indicadores.frecuenciaCardiaca=rand()%(200+1);
+		//paciente->indicadores.frecuenciaRespiratoria=rand()%(60+1);
+		paciente->indicadores.frecuenciaCardiaca=200;
+		paciente->indicadores.saturacionOxigeno=80;
+		//paciente->indicadores.presionArterialSistolica==rand()%(160-50+1) + 50;
+		//paciente->indicadores.saturacionOxigeno=rand()%(110-40+1) + 40;
+		//paciente->indicadores.temperatura=drand48()*(44-33)+33;// numero aleatorio entre 33 y 44
 		sleep(5);
-	} 
+		printf("\n LECTURA DE SENSORES ENVIADA");
+	//} 
 }
 
 

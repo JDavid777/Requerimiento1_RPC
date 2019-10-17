@@ -4,19 +4,19 @@
  */
 
 #include <memory.h> /* for memset */
-#include "alertas.h"
+#include "notificaciones.h"
 
 /* Default timeout can be changed using clnt_control() */
 static struct timeval TIMEOUT = { 25, 0 };
 
 bool_t *
-enviarindicadores_1(Paciente *argp, CLIENT *clnt)
+enviarnotificacion_2(AlertaGenerada *argp, CLIENT *clnt)
 {
 	static bool_t clnt_res;
 
 	memset((char *)&clnt_res, 0, sizeof(clnt_res));
-	if (clnt_call (clnt, enviarIndicadores,
-		(xdrproc_t) xdr_Paciente, (caddr_t) argp,
+	if (clnt_call (clnt, enviarNotificacion,
+		(xdrproc_t) xdr_AlertaGenerada, (caddr_t) argp,
 		(xdrproc_t) xdr_bool, (caddr_t) &clnt_res,
 		TIMEOUT) != RPC_SUCCESS) {
 		return (NULL);

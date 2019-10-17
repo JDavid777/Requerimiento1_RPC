@@ -11,9 +11,7 @@ enviarnotificacion_2_svc(AlertaGenerada *argp, struct svc_req *rqstp)
 {
 	static bool_t  result;
 
-	/*
-	 * insert server code here
-	 */
+	printf("\n%s",argp->mensaje);
 
 	return &result;
 }
