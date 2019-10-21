@@ -48,7 +48,7 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
     char * dirIpServidorNotificaciones="localhost";
 
 	int grupo =obtenerGrupo((float)argp->edad); // TODO cambiar a float el int edad de la interfaz
-	int puntuacion=1;
+	int puntuacion=0;
 
 	//Saturacion de oxigeno es igual para todas las edades
 	if(argp->indicadores.saturacionOxigeno<90){

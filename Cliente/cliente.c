@@ -15,8 +15,8 @@
 //funciones
 
 void ingresarDatosPaciente(Paciente *paciente);
-void comenzarLecturaSensores(Paciente *paciente);
-void menu(Paciente *paciente);
+void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt);
+void menu(Paciente *paciente,CLIENT *clnt);
 void
 gestion_alertas_1(char *host)
 {
@@ -25,7 +25,7 @@ gestion_alertas_1(char *host)
 	Paciente  enviarindicadores_1_arg;
     
     
-    menu(&enviarindicadores_1_arg); //TODO falta Enviar al servidor los indicadores
+    
 
 
 #ifndef	DEBUG
@@ -36,6 +36,7 @@ gestion_alertas_1(char *host)
 	}
 #endif	/* DEBUG */
 
+	menu(&enviarindicadores_1_arg,clnt); //TODO falta Enviar al servidor los indicadores
 	result_1 = enviarindicadores_1(&enviarindicadores_1_arg, clnt);
 	if (result_1 == (bool_t *) NULL) {
 		clnt_perror (clnt, "call failed");
@@ -45,22 +46,22 @@ gestion_alertas_1(char *host)
 #endif	 /* DEBUG */
 }
 
-void menu(Paciente *paciente){
+void menu(Paciente *paciente,CLIENT *clnt){
 	int opcion=0;
-	//do{
+	do{
 			
 			printf("\n  ======MENU=====   \n");
 			//opciones menu
 			printf("1. Ingresar datos del paciente\n");
 			printf("2. Comenzar lectura de los sensores\n");
-			printf("3. Terminar");
+			printf("3. Terminar\n");
 			scanf("%d",&opcion); 	// leyendo opcion
 
 			switch (opcion)
 			{
 			case 1: ingresarDatosPaciente(paciente); // pasar por referencia TODO
 				break;
-			case 2: comenzarLecturaSensores(paciente); // pasar por referencia TODO
+			case 2: comenzarLecturaSensores(paciente,clnt); // pasar por referencia TODO
 				break;
 			default: printf("Opcion no valida.\n por favor ingresar una opcion correcta\n");
 			break;
@@ -71,9 +72,9 @@ void menu(Paciente *paciente){
 
 		
 	}
-	//while(opcion!=3);
+	while(opcion!=3);
 
-	//}
+}
 
 void ingresarDatosPaciente(Paciente *paciente)
 {
@@ -91,22 +92,34 @@ void ingresarDatosPaciente(Paciente *paciente)
 
 }
 
-void comenzarLecturaSensores(Paciente *paciente){
+void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
 	srand48(getpid());
-	//while(1){
+	bool_t  *result_1;
+	while(TRUE){
 	 
-		//paciente->indicadores.presionArterialDiastolica=rand()%(110-40+1) + 40;
-		//paciente->indicadores.frecuenciaCardiaca=rand()%(200+1);
-		//paciente->indicadores.frecuenciaRespiratoria=rand()%(60+1);
-		paciente->indicadores.frecuenciaCardiaca=200;
-		paciente->indicadores.saturacionOxigeno=80;
-		//paciente->indicadores.presionArterialSistolica==rand()%(160-50+1) + 50;
-		//paciente->indicadores.saturacionOxigeno=rand()%(110-40+1) + 40;
-		//paciente->indicadores.temperatura=drand48()*(44-33)+33;// numero aleatorio entre 33 y 44
+		paciente->indicadores.presionArterialDiastolica=rand()%(110-40+1) + 40;
+		paciente->indicadores.frecuenciaCardiaca=rand()%(200+1);
+		paciente->indicadores.frecuenciaRespiratoria=rand()%(60+1);
+		paciente->indicadores.presionArterialSistolica=rand()%(160-50+1) + 50;
+		paciente->indicadores.saturacionOxigeno=rand()%(110-40+1) + 40;
+		paciente->indicadores.temperatura=drand48()*(44-33)+33;// numero aleatorio entre 33 y 44
+
+		result_1 = enviarindicadores_1(paciente, clnt);
+		if (result_1 == (bool_t *) NULL) {
+		clnt_perror (clnt, "call failed");
+		}
+		printf("\n LECTURA DE SENSORES ENVIADA\n");
 		sleep(5);
-		printf("\n LECTURA DE SENSORES ENVIADA");
-	//} 
-}
+		
+	}
+
+
+
+
+		
+} 
+
+
 
 
 
