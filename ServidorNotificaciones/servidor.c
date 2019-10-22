@@ -17,7 +17,7 @@ enviarnotificacion_2_svc(AlertaGenerada *argp, struct svc_req *rqstp)
 
 	printf("\nNombres y apellidos: %s        ",argp->paciente.nombres);
 
-	printf("\nEdad: %d",argp->paciente.edad); // TODO CAMBIAR A FLOAT
+	//printf("\nEdad: %d",argp->paciente.edad); // TODO CAMBIAR A FLOAT
 
 	printf("\nHora de la alerta: %s      ",argp->paciente.hora); // TODO Hora sin registro
 

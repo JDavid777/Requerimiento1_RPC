@@ -14,31 +14,32 @@
 
 //funciones
 
-void ingresarDatosPaciente(Paciente *paciente);
-void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt);
-void menu(Paciente *paciente,CLIENT *clnt);
+void 
+ingresarDatosPaciente(Paciente *paciente);
+void 
+comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt);
+void 
+menu(Paciente *paciente,CLIENT *clnt);
 void
 gestion_alertas_1(char *host)
 {
 	CLIENT *clnt;
-	bool_t  *result_1;
-	Paciente  enviarindicadores_1_arg;
-    
-    
-    
-
+	bool_t  *result;
+	Paciente  paciente;
 
 #ifndef	DEBUG
+
 	clnt = clnt_create (host, gestion_alertas, gestion_alertas_version, "udp");
 	if (clnt == NULL) {
 		clnt_pcreateerror (host);
 		exit (1);
 	}
+
 #endif	/* DEBUG */
 
-	menu(&enviarindicadores_1_arg,clnt); //TODO falta Enviar al servidor los indicadores
-	result_1 = enviarindicadores_1(&enviarindicadores_1_arg, clnt);
-	if (result_1 == (bool_t *) NULL) {
+	menu(&paciente,clnt); //TODO falta Enviar al servidor los indicadores
+	result = enviarindicadores_1(&paciente, clnt);
+	if (result == (bool_t *) NULL) {
 		clnt_perror (clnt, "call failed");
 	}
 #ifndef	DEBUG
@@ -46,7 +47,8 @@ gestion_alertas_1(char *host)
 #endif	 /* DEBUG */
 }
 
-void menu(Paciente *paciente,CLIENT *clnt){
+void 
+menu(Paciente *paciente,CLIENT *clnt){
 	int opcion=0;
 	do{
 			
@@ -76,25 +78,27 @@ void menu(Paciente *paciente,CLIENT *clnt){
 
 }
 
-void ingresarDatosPaciente(Paciente *paciente)
+void 
+ingresarDatosPaciente(Paciente *paciente)
 {
 
 	printf("\n-- INGRESANDO DATOS DEL PACIENTE --\n");
 
 	printf("\nNombres y Apellidos: ");
-	scanf("%s",&paciente->nombres);
+	scanf("%s",paciente->nombres);
 
 	printf("\nEdad: ");
-	scanf("%d",&paciente->edad); //TODO cambiar la edad de int a float en la interfaz
+	//scanf("%d",&paciente->edad); //TODO cambiar la edad de int a float en la interfaz
 
 	printf("\nNumero Habitacion: ");
 	scanf("%d",&paciente->numHabitacion);
 
 }
 
-void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
+void 
+comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
 	srand48(getpid());
-	bool_t  *result_1;
+	bool_t  *result;
 	while(TRUE){
 	 
 		paciente->indicadores.presionArterialDiastolica=rand()%(110-40+1) + 40;
@@ -104,8 +108,8 @@ void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
 		paciente->indicadores.saturacionOxigeno=rand()%(110-40+1) + 40;
 		paciente->indicadores.temperatura=drand48()*(44-33)+33;// numero aleatorio entre 33 y 44
 
-		result_1 = enviarindicadores_1(paciente, clnt);
-		if (result_1 == (bool_t *) NULL) {
+		result = enviarindicadores_1(paciente, clnt);
+		if (result == (bool_t *) NULL) {
 		clnt_perror (clnt, "call failed");
 		}
 		printf("\n LECTURA DE SENSORES ENVIADA\n");

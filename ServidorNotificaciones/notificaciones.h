@@ -17,7 +17,7 @@ extern "C" {
 
 struct InfoPaciente {
 	char nombres[MAXMSJ];
-	int edad;
+	char edad[MAXMSJ];
 	int numHabitacion;
 	char hora[10];
 	char fecha[50];

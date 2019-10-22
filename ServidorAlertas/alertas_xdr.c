@@ -34,7 +34,8 @@ xdr_Paciente (XDR *xdrs, Paciente *objp)
 	 if (!xdr_vector (xdrs, (char *)objp->nombres, MAXNOM,
 		sizeof (char), (xdrproc_t) xdr_char))
 		 return FALSE;
-	 if (!xdr_int (xdrs, &objp->edad))
+	 if (!xdr_vector (xdrs, (char *)objp->edad, MAXNOM,
+		sizeof (char), (xdrproc_t) xdr_char))
 		 return FALSE;
 	 if (!xdr_int (xdrs, &objp->numHabitacion))
 		 return FALSE;

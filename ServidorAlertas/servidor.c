@@ -42,12 +42,12 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 	static bool_t  result;
 
 	CLIENT *clnt;
-	bool_t  *result_1;
-	AlertaGenerada  enviarnotificacion_2_arg;
+	bool_t  *result;
+	AlertaGenerada  enviarAlertaGenerada;
 	
     char * dirIpServidorNotificaciones="localhost";
 
-	int grupo =obtenerGrupo((float)argp->edad); // TODO cambiar a float el int edad de la interfaz
+	int grupo ;//=obtenerGrupo((float)argp->edad); // TODO cambiar a float el int edad de la interfaz
 	int puntuacion=0;
 
 	//Saturacion de oxigeno es igual para todas las edades
@@ -56,9 +56,9 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 	}
 
 	//DATOS PACIENTE
-	strcpy(enviarnotificacion_2_arg.paciente.nombres,argp->nombres);
-	enviarnotificacion_2_arg.paciente.edad=argp->edad;
-	enviarnotificacion_2_arg.paciente.numHabitacion=argp->numHabitacion;
+	strcpy(enviarAlertaGenerada.paciente.nombres,argp->nombres);
+	//enviarAlertaGenerada.paciente.edad=argp->edad;
+	enviarAlertaGenerada.paciente.numHabitacion=argp->numHabitacion;
 
 	//GENERANDO PUNTUACION 
 	switch (grupo)
@@ -66,8 +66,8 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 		case 1:
 			if(argp->indicadores.frecuenciaCardiaca<120 || 
 				argp->indicadores.frecuenciaCardiaca>140 ){
-				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
-				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
+				strcpy(enviarAlertaGenerada.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarAlertaGenerada.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
 				puntuacion++;
 			}
 
@@ -77,8 +77,8 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 			//evaluando para frecuencia cardiaca
 			if(argp->indicadores.frecuenciaCardiaca<100 || 
 				argp->indicadores.frecuenciaCardiaca>130 ){
-				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
-				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
+				strcpy(enviarAlertaGenerada.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarAlertaGenerada.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
 				puntuacion++;
 			}
 
@@ -87,8 +87,8 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 			//evaluando para frecuencia cardiaca
 			if(argp->indicadores.frecuenciaCardiaca<100 || 
 				argp->indicadores.frecuenciaCardiaca>120 ){
-				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
-				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
+				strcpy(enviarAlertaGenerada.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarAlertaGenerada.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
 				puntuacion++;
 			}
 			break;
@@ -96,9 +96,9 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 			//evaluando para frecuencia cardiaca
 			if(argp->indicadores.frecuenciaCardiaca<80 || 
 				argp->indicadores.frecuenciaCardiaca>120 ){
-				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
-				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
-				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;				
+				strcpy(enviarAlertaGenerada.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarAlertaGenerada.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
+				enviarAlertaGenerada.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;				
 				puntuacion++;
 			}
 			break;
@@ -106,8 +106,8 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 			//evaluando para frecuencia cardiaca
 			if(argp->indicadores.frecuenciaCardiaca<80 || 
 				argp->indicadores.frecuenciaCardiaca>100){
-				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
-				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;	
+				strcpy(enviarAlertaGenerada.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarAlertaGenerada.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;	
 				puntuacion++;
 			}
 			break;
@@ -115,8 +115,8 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 			//evaluando para frecuencia cardiaca
 			if(argp->indicadores.frecuenciaCardiaca<70 || 
 				argp->indicadores.frecuenciaCardiaca>80){
-				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
-				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;				
+				strcpy(enviarAlertaGenerada.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarAlertaGenerada.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;				
 				puntuacion++;
 			}
 			break;
@@ -124,8 +124,8 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 			//evaluando para frecuencia cardiaca
 			if(argp->indicadores.frecuenciaCardiaca<60 || 
 				argp->indicadores.frecuenciaCardiaca>80 ){
-				strcpy(enviarnotificacion_2_arg.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
-				enviarnotificacion_2_arg.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;				
+				strcpy(enviarAlertaGenerada.indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+				enviarAlertaGenerada.indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;				
 				puntuacion++;
 			}
 			
@@ -137,9 +137,9 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 
 	//MENSAJE
 	if(puntuacion==2){
-		strcpy(enviarnotificacion_2_arg.mensaje,"Enviar una enfermera");
+		strcpy(enviarAlertaGenerada.mensaje,"Enviar una enfermera");
 	}else if(puntuacion>2){
-		strcpy(enviarnotificacion_2_arg.mensaje,"Enviar un medico y una enfermera");
+		strcpy(enviarAlertaGenerada.mensaje,"Enviar un medico y una enfermera");
 	}
 
 
@@ -160,9 +160,9 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 		printf("\n \n ENVIANDO ALERTA...");
 		//TODO AGREGAR A ULTIMAS ALERTAS
 
-		result_1 = enviarnotificacion_2(&enviarnotificacion_2_arg, clnt);
+		result = enviarnotificacion_2(&enviarAlertaGenerada, clnt);
 			
-		if (result_1 == (bool_t *) NULL) {
+		if (result == (bool_t *) NULL) {
 			clnt_perror (clnt, "call failed");
 		}
 	}
