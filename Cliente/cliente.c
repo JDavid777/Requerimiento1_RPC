@@ -147,6 +147,7 @@ comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
 		printf("\n Presion Arterial Sistolica: %.2f",paciente->indicadores.presionArterialSistolica);
 		printf("\n Saturacion de Oxigeno: %.2f",paciente->indicadores.saturacionOxigeno);
 		printf("\n Temperatura: %.2f",paciente->indicadores.temperatura);
+		printf("\n EDAD %s",paciente->edad);
 		sleep(8);
 		
 	}		
