@@ -17,11 +17,16 @@ enviarnotificacion_2_svc(AlertaGenerada *argp, struct svc_req *rqstp)
 
 	printf("\nNombres y apellidos: %s        ",argp->paciente.nombres);
 
-	//printf("\nEdad: %d",argp->paciente.edad); // TODO CAMBIAR A FLOAT
+	printf("\nEdad: %s Dias/Meses/Anios",argp->paciente.edad); 
 
-	printf("\nHora de la alerta: %s      ",argp->paciente.hora); // TODO Hora sin registro
+	printf("\nHora de la alerta: %s      ",argp->paciente.hora); 
 
-	printf("\nFecha de la alerta: %s  ",argp->paciente.fecha); // TODO Fecha sin registro
+	printf("\nFecha de la alerta: %s  ",argp->paciente.fecha); 
+
+
+	printf("\n         Indicadores que generaron la alerta        ");
+
+	printf("\n Nombre Indicador       Valor");
 
 	return &result;
 }

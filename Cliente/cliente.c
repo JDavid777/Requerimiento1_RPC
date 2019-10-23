@@ -113,9 +113,10 @@ ingresarDatosPaciente(Paciente *paciente)
 	scanf("%s",fecha); 
 	
 	char *edad=calcularEdad(fecha);
-	sprintf(paciente->edad,"%s",edad);
+	strcpy(paciente->edad,edad);
 	free(edad);
 
+	
 	printf("\nNumero Habitacion: ");
 	scanf("%d",&paciente->numHabitacion);
 }
@@ -147,7 +148,7 @@ comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
 		printf("\n Presion Arterial Sistolica: %.2f",paciente->indicadores.presionArterialSistolica);
 		printf("\n Saturacion de Oxigeno: %.2f",paciente->indicadores.saturacionOxigeno);
 		printf("\n Temperatura: %.2f",paciente->indicadores.temperatura);
-		printf("\n EDAD %s",paciente->edad);
+		
 		sleep(8);
 		
 	}		
@@ -160,7 +161,7 @@ comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
  **/
 int*
 partirFecha(char *fecha){
-      int *resultFecha;
+   int *resultFecha;
    int idx=0;
    resultFecha=malloc(3);
     char delimitador[] = "/";
@@ -174,6 +175,7 @@ partirFecha(char *fecha){
             idx++;
         }   
     }
+	
 	return resultFecha;
 }
 
@@ -197,15 +199,19 @@ calcularEdad(char *fecha){
     strftime(fechaActual, 100, "%d/%m/%Y", tm);
     int *fechaAct=partirFecha(fechaActual);
     int* fechaNac= partirFecha(fecha);
-    
-    if ( fechaAct[2] < fechaNac[2]  )
+	int anios = fechaAct[2]-fechaNac[2];
+    //printf("\n%d dias fecha actual antes \n ",fechaAct[2]);
+    if ( fechaAct[0] < fechaNac[0]  )
     {   //En caso de ser menor la fecha actual que el nacimiento
         fechaAct[2] = fechaAct[2] + 30; // Se le suma los 30 días (1 mes) a la fecha actual
         fechaAct[1] = fechaAct[1] - 1; // Se le resta un mes (30 días) al mes actual
         dias =  fechaAct[2] - fechaNac[2]; //Se le resta fecha nacimiento al actual
+		//printf("\n%d dias fecha actual despues\n ",fechaAct[2]);
     }
     else //En caso de ser mayor la fecha actual que el nacimiento
-        dias =  fechaAct[2] - fechaNac[2];  //Se le resta fecha nacimiento al actual
+        dias =  fechaAct[0] - fechaNac[0];  //Se le resta fecha nacimiento al actual
+		//printf("\n%d dias fecha actual despues\n ",fechaNac[2]);
+		//printf("\n%d dias despues\n ",dias);
 
     if( fechaAct[1] < fechaNac[1] )
     {   //En caso de ser menor el mes actual que el nacimiento
@@ -216,7 +222,8 @@ calcularEdad(char *fecha){
     else //En caso de ser mayor el mes actual que el nacimiento
         meses = fechaAct[1] - fechaNac[1]; //Se le resta año nacimiento al actual
     
-    sprintf(buff,"%d/%d/%d",dias,meses,fechaAct[2]-fechaNac[2]);
-
+	
+    sprintf(buff,"%d/%d/%d",dias,meses,anios);
+	
     return buff;
 }

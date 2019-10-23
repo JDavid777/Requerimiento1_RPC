@@ -11,60 +11,59 @@
 
 void 
 puntuacionDeLaAlerta(Paciente *paciente,AlertaGenerada *alerta);
-
+int* ObtenerEdad(char *fecha);
 void arterialSistolica(Paciente *,AlertaGenerada *,float minimo, float maximo,int *);
 void frecuenciaCardiaca(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion);
 void frecuenciaRespiratoria(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion);
 void Temperatura(Paciente *,AlertaGenerada *,float minimo, float maximo,int *);
 void arterialDiastolica(Paciente *,AlertaGenerada *,float minimo, float maximo,int *);
 int 
-obtenerGrupo(float edad){
+obtenerGrupo(char *edades){
+
+	int *edad=ObtenerEdad(edades);
 
 	//seis semanas
-	if(edad<=0.06){
+	if(edad[2]==0 && edad[1]<=1 && edad[0]<=15){
 		return 1;
 	}
 	// 1 año
-	if(edad<1){
+	if(edad[2]<1 && edad[1]<12 && edad[0]<=30){
 		return 2;
 	}
 	// 2 años
-	if(edad<2){
+	if(edad[2]<2 && edad[1]<12 && edad[0]<=30){
 		return 3;
 	}
 	// 6 años
-		if(edad<6){
+		if(edad[2]<6 && edad[1]<12 && edad[0]<=30){
 		return 4;
 	}
 	//13 años
-		if(edad<13){
+		if(edad[2]<13 && edad[1]<12 && edad[0]<=30){
 		return 5;
 	}
 	// 16 años
-		if(edad<16){
+		if(edad[2]<16 && edad[1]<12 && edad[0]<=30){
 		return 6;
 	}
-	// mayores a 16 años
-		if(edad>=16){
-		return 7;
-	}
-	return -1;
-}
 
+	//mayores a 16
+	return 7;
+}
 
 bool_t *
 enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 {
+	printf("\n Ejecutando servidor \n");
 	static bool_t result;
 	bool_t *result_1;
 	CLIENT *clnt;
 	AlertaGenerada  enviarAlertaGenerada;
 	
     char * dirIpServidorNotificaciones="localhost";
-
-	int grupo ;//=obtenerGrupo((float)argp->edad); // TODO cambiar a float el int edad de la interfaz
-	int  puntuacion=0;
-
+	int grupo =obtenerGrupo(argp->edad);
+	printf("\n%d grupo al que pertenece ",grupo);
+	int   puntuacion=0;
 	//Saturacion de oxigeno es igual para todas las edades
 	if(argp->indicadores.saturacionOxigeno<90){
 		puntuacion++;
@@ -130,6 +129,8 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 			Temperatura(argp,&enviarAlertaGenerada,36.2,37.2,&puntuacion);
 			arterialSistolica(argp,&enviarAlertaGenerada,110,140,&puntuacion);
 			arterialDiastolica(argp,&enviarAlertaGenerada,70,90,&puntuacion);		
+			
+			
 			break;
 		
 		default:
@@ -196,7 +197,11 @@ void frecuenciaCardiaca(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,floa
 				argp->indicadores.frecuenciaCardiaca>maximo ){
 				strcpy(enviarAlertaGenerada->indicadoresAlerta[0].indicador,"frecuencia cardiaca");
 				enviarAlertaGenerada->indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
-				puntuacion++;
+				
+				*puntuacion=(int)((int)*puntuacion + 1);
+
+				
+
 			}
 }
 void frecuenciaRespiratoria(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion){
@@ -205,25 +210,30 @@ void frecuenciaRespiratoria(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,
 				argp->indicadores.frecuenciaCardiaca>maximo ){
 				strcpy(enviarAlertaGenerada->indicadoresAlerta[1].indicador,"frecuencia Respiratoria");
 				enviarAlertaGenerada->indicadoresAlerta[1].valor=argp->indicadores.frecuenciaRespiratoria;
-				puntuacion++;
+				*puntuacion=(int)((int)*puntuacion + 1);
+				
 			}
 }
 void Temperatura(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion){
 
+		
 			if(argp->indicadores.temperatura<minimo || 
 				argp->indicadores.temperatura>maximo ){
+
 				strcpy(enviarAlertaGenerada->indicadoresAlerta[2].indicador,"Temperatura");
 				enviarAlertaGenerada->indicadoresAlerta[2].valor=argp->indicadores.temperatura;
-				puntuacion++;
+				*puntuacion=(int)((int)*puntuacion + 1);
 			}
 }
 void arterialSistolica(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion){
 	//Tension arterial sistolica
+	
 			if(argp->indicadores.frecuenciaCardiaca<minimo || 
 				argp->indicadores.frecuenciaCardiaca>maximo ){
+					
 				strcpy(enviarAlertaGenerada->indicadoresAlerta[3].indicador,"Presion arterial sistloca");
 				enviarAlertaGenerada->indicadoresAlerta[3].valor=argp->indicadores.presionArterialSistolica;
-				puntuacion++;
+				*puntuacion=(int)((int)*puntuacion + 1);
 			}
 }
 void arterialDiastolica(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion){
@@ -233,7 +243,26 @@ void arterialDiastolica(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,floa
 				argp->indicadores.frecuenciaCardiaca>maximo ){
 				strcpy(enviarAlertaGenerada->indicadoresAlerta[4].indicador,"Presion arterial diastolica");
 				enviarAlertaGenerada->indicadoresAlerta[4].valor=argp->indicadores.presionArterialSistolica;
-				puntuacion++;
+				*puntuacion=(int)((int)*puntuacion + 1);
 			}
+}
+int*
+ObtenerEdad(char *fecha){       
+   int *resultFecha;
+   int idx=0;
+   resultFecha=malloc(3);
+    char delimitador[] = "/";
+    char *token = strtok(fecha, delimitador);
+    if(token != NULL){
+        for (int i=0; i<3;i++)
+        {
+            int aux=atoi(token);
+            resultFecha[idx]=aux;
+            token = strtok(NULL, delimitador);
+            idx++;
+        }   
+    }
+	
+	return resultFecha;
 }
 
