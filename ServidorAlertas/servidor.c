@@ -8,8 +8,14 @@
 #include "notificaciones.h"
 
 
-void puntuacionDeLaAlerta(Paciente *paciente,AlertaGenerada *alerta);
-int obtenerGrupo(float edad){
+void 
+puntuacionDeLaAlerta(Paciente *paciente,AlertaGenerada *alerta);
+
+int 
+obtenerGrupo(float edad);
+
+int 
+obtenerGrupo(float edad){
 
 	if(edad<=0.06){
 		return 1;
@@ -39,10 +45,9 @@ int obtenerGrupo(float edad){
 bool_t *
 enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 {
-	static bool_t  result;
-
+	static bool_t result;
+	bool_t *result_1;
 	CLIENT *clnt;
-	bool_t  *result;
 	AlertaGenerada  enviarAlertaGenerada;
 	
     char * dirIpServidorNotificaciones="localhost";
@@ -160,9 +165,9 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 		printf("\n \n ENVIANDO ALERTA...");
 		//TODO AGREGAR A ULTIMAS ALERTAS
 
-		result = enviarnotificacion_2(&enviarAlertaGenerada, clnt);
+		result_1 = enviarnotificacion_2(&enviarAlertaGenerada, clnt);
 			
-		if (result == (bool_t *) NULL) {
+		if (result_1 == (bool_t *) NULL) {
 			clnt_perror (clnt, "call failed");
 		}
 	}

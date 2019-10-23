@@ -8,23 +8,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <time.h>
+#include <string.h>
 
+//Funciones Locales
 
+char* 
+calcularEdad(char *fecha);
 
-
-//funciones
+int*
+partirFecha(char * fecha);
 
 void 
 ingresarDatosPaciente(Paciente *paciente);
+
 void 
 comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt);
+
 void 
 menu(Paciente *paciente,CLIENT *clnt);
+
+
 void
 gestion_alertas_1(char *host)
 {
 	CLIENT *clnt;
-	bool_t  *result;
 	Paciente  paciente;
 
 #ifndef	DEBUG
@@ -37,64 +45,84 @@ gestion_alertas_1(char *host)
 
 #endif	/* DEBUG */
 
-	menu(&paciente,clnt); //TODO falta Enviar al servidor los indicadores
-	result = enviarindicadores_1(&paciente, clnt);
-	if (result == (bool_t *) NULL) {
-		clnt_perror (clnt, "call failed");
-	}
+	menu(&paciente,clnt); 
+
 #ifndef	DEBUG
 	clnt_destroy (clnt);
 #endif	 /* DEBUG */
 }
 
+
+int
+main (int argc, char *argv[])
+{
+	char *host;
+
+	if (argc < 2) {
+		printf ("usage: %s server_host\n", argv[0]);
+		exit (1);
+	}
+	host = argv[1];
+	gestion_alertas_1 (host);
+exit (0);
+}
+
+/**
+ * Muestra el menu de opciones de el host cliente
+ **/
 void 
 menu(Paciente *paciente,CLIENT *clnt){
 	int opcion=0;
 	do{
 			
-			printf("\n  ======MENU=====   \n");
+			printf("\n =================MENU=================   \n");
 			//opciones menu
 			printf("1. Ingresar datos del paciente\n");
 			printf("2. Comenzar lectura de los sensores\n");
 			printf("3. Terminar\n");
-			scanf("%d",&opcion); 	// leyendo opcion
+			scanf("%d",&opcion); 	
 
 			switch (opcion)
 			{
-			case 1: ingresarDatosPaciente(paciente); // pasar por referencia TODO
+			case 1: ingresarDatosPaciente(paciente); 
 				break;
-			case 2: comenzarLecturaSensores(paciente,clnt); // pasar por referencia TODO
+			case 2: comenzarLecturaSensores(paciente,clnt); 
 				break;
 			default: printf("Opcion no valida.\n por favor ingresar una opcion correcta\n");
 			break;
 				
-			}
-
-			//TODO hacer limpiar consola
-
-		
+			}		
 	}
 	while(opcion!=3);
-
 }
+/**
+ * Funcion que permite el registro de el paciente;
+ * @param paciente 
+ **/
 
 void 
 ingresarDatosPaciente(Paciente *paciente)
 {
-
 	printf("\n-- INGRESANDO DATOS DEL PACIENTE --\n");
 
 	printf("\nNombres y Apellidos: ");
 	scanf("%s",paciente->nombres);
 
-	printf("\nEdad: ");
-	//scanf("%d",&paciente->edad); //TODO cambiar la edad de int a float en la interfaz
+	printf("\nFecha nacimiento en formato dd/mm/yyyy: ");
+	char *fecha=malloc(sizeof(char));
+	scanf("%s",fecha); 
+	
+	char *edad=calcularEdad(fecha);
+	sprintf(paciente->edad,"%s",edad);
+	free(edad);
 
 	printf("\nNumero Habitacion: ");
 	scanf("%d",&paciente->numHabitacion);
-
 }
 
+/**
+ * Realiza la lectura de los sensores ques estan la habitacion; envia los indicadores cada cierto tiempo.
+ * */
 void 
 comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
 	srand48(getpid());
@@ -110,35 +138,84 @@ comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
 
 		result = enviarindicadores_1(paciente, clnt);
 		if (result == (bool_t *) NULL) {
-		clnt_perror (clnt, "call failed");
+			clnt_perror (clnt, "call failed");
 		}
-		printf("\n LECTURA DE SENSORES ENVIADA\n");
-		sleep(5);
+		printf("\n ENVIANDO INDICADORES\n");
+		printf("\n Frecuencia Cardiaca: %.2f",paciente->indicadores.frecuenciaCardiaca);
+		printf("\n Frecuencia Respiratoria: %.2f",paciente->indicadores.frecuenciaRespiratoria);
+		printf("\n Presion Arterial Diastolica: %.2f",paciente->indicadores.presionArterialDiastolica);
+		printf("\n Presion Arterial Sistolica: %.2f",paciente->indicadores.presionArterialSistolica);
+		printf("\n Saturacion de Oxigeno: %.2f",paciente->indicadores.saturacionOxigeno);
+		printf("\n Temperatura: %.2f",paciente->indicadores.temperatura);
+		sleep(8);
 		
-	}
-
-
-
-
-		
+	}		
 } 
+/**
+ * Convierte una fecha en formato dd/mm/yyyy a un array que contiene un item de la fecha 
+ * en cada posicion.
+ * @param fecha fecha ordinarioa en formato dd/mm/yyyy
+ * @return array con la fecha partida
+ **/
+int*
+partirFecha(char *fecha){
+      int *resultFecha;
+   int idx=0;
+   resultFecha=malloc(3);
+    char delimitador[] = "/";
+    char *token = strtok(fecha, delimitador);
+    if(token != NULL){
+        for (int i=0; i<3;i++)
+        {
+            int aux=atoi(token);
+            resultFecha[idx]=aux;
+            token = strtok(NULL, delimitador);
+            idx++;
+        }   
+    }
+	return resultFecha;
+}
 
+/**
+ * Calcula la edad de un paciente en dias, meses y años
+ * @param fecha fecha de nacimiento del paciente.
+ * @return La edad actual del paciente
+ * */
+char*
+calcularEdad(char *fecha){
 
+    time_t t;
+    struct tm *tm;
+    char fechaActual[100];
+	int dias , meses;
+    char* buff;
+	buff=malloc(sizeof(char));
 
+    t=time(NULL);
+    tm=localtime(&t);
+    strftime(fechaActual, 100, "%d/%m/%Y", tm);
+    int *fechaAct=partirFecha(fechaActual);
+    int* fechaNac= partirFecha(fecha);
+    
+    if ( fechaAct[2] < fechaNac[2]  )
+    {   //En caso de ser menor la fecha actual que el nacimiento
+        fechaAct[2] = fechaAct[2] + 30; // Se le suma los 30 días (1 mes) a la fecha actual
+        fechaAct[1] = fechaAct[1] - 1; // Se le resta un mes (30 días) al mes actual
+        dias =  fechaAct[2] - fechaNac[2]; //Se le resta fecha nacimiento al actual
+    }
+    else //En caso de ser mayor la fecha actual que el nacimiento
+        dias =  fechaAct[2] - fechaNac[2];  //Se le resta fecha nacimiento al actual
 
+    if( fechaAct[1] < fechaNac[1] )
+    {   //En caso de ser menor el mes actual que el nacimiento
+        fechaAct[1] = fechaAct[1] + 12; // Se le suma los 12 meses (1 año) al mes actual
+        fechaAct[2] = fechaAct[2] - 1 ; // Se le resta 1 año ( 12 meses) al año actual
+        meses = fechaAct[1] - fechaNac[1]; //Se le resta año nacimiento al actual
+    }
+    else //En caso de ser mayor el mes actual que el nacimiento
+        meses = fechaAct[1] - fechaNac[1]; //Se le resta año nacimiento al actual
+    
+    sprintf(buff,"%d/%d/%d",dias,meses,fechaAct[2]-fechaNac[2]);
 
-
-
-int
-main (int argc, char *argv[])
-{
-	char *host;
-
-	if (argc < 2) {
-		printf ("usage: %s server_host\n", argv[0]);
-		exit (1);
-	}
-	host = argv[1];
-	gestion_alertas_1 (host);
-exit (0);
+    return buff;
 }
