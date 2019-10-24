@@ -11,7 +11,7 @@
 int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char*edades);
 int* ObtenerEdad(char *fecha);
 void guardarHistoria(char* buff);
-void generarAlerta(int puntuacion,AlertaGenerada* enviarAlertaGenereada,CLIENT* clnt);
+void generarAlerta(int puntuacion,AlertaGenerada enviarAlertaGenereada,CLIENT* clnt);
 void puntuacionDeLaAlerta(Paciente *paciente,AlertaGenerada *alerta);
 void arterialSistolica(Paciente *,AlertaGenerada *,float minimo, float maximo,int *);
 void frecuenciaCardiaca(Paciente *paciente,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion);
@@ -23,10 +23,13 @@ void generarPuntuacion(Paciente *paciente, AlertaGenerada * enviarAlertaGenerada
 bool_t *enviarindicadores_1_svc(Paciente *paciente, struct svc_req *rqstp){
 	printf("\n Ejecutando servidor \n");
 	static bool_t result;
+	bool_t *result_1;
 	CLIENT *clnt;
 	AlertaGenerada  enviarAlertaGenerada;
     char * dirIpServidorNotificaciones="localhost";
 	int   puntuacion=0;
+
+
 
 	#ifndef	DEBUG
 	clnt = clnt_create (dirIpServidorNotificaciones, gestion_notificaciones, gestion_notificaiones_version, "udp");
@@ -36,14 +39,91 @@ bool_t *enviarindicadores_1_svc(Paciente *paciente, struct svc_req *rqstp){
 	}
 	#endif	/* DEBUG */
 
+
+
+
+
 	//DATOS PACIENTE
 	strcpy(enviarAlertaGenerada.paciente.nombres,paciente->nombres);
 	strcpy(enviarAlertaGenerada.paciente.apellidos,paciente->apellidos);
 	enviarAlertaGenerada.paciente.numHabitacion=paciente->numHabitacion;
 	generarPuntuacion(paciente,&enviarAlertaGenerada,&puntuacion);
-	generarAlerta(puntuacion,&enviarAlertaGenerada,clnt);
 	
-	
+
+	static int numAlertas=0;
+	if(puntuacion==2){
+		strcpy(enviarAlertaGenerada.mensaje,"Enviar una enfermera");
+	}else if(puntuacion>2){
+		strcpy(enviarAlertaGenerada.mensaje,"Enviar un medico y una enfermera");
+	}
+
+	// Generar alerta si hay mas de dos puntuciones
+	if(puntuacion>=2){
+		time_t t;
+    	struct tm *tm;
+    	char fechaAlerta[100];
+		char horaAlerta[100];
+    	char* buff;
+		buff=malloc(sizeof(char)*100);
+
+    	t=time(NULL);
+    	tm=localtime(&t);
+    	strftime(fechaAlerta, 100, "%d/%m/%Y", tm);
+		strftime(horaAlerta, 100, "%H:%M:%S", tm);
+		strcpy(enviarAlertaGenerada.paciente.fecha,fechaAlerta); // fecha en que se genero la alerta
+		strcpy(enviarAlertaGenerada.paciente.hora,horaAlerta);  // hora actual 
+		
+		sprintf(buff,"%d-%s-%s-%s-%s\n",enviarAlertaGenerada.paciente.numHabitacion,
+		enviarAlertaGenerada.paciente.nombres,enviarAlertaGenerada.paciente.apellidos,
+		enviarAlertaGenerada.paciente.fecha,enviarAlertaGenerada.paciente.hora);
+		guardarHistoria(buff);
+		free(buff);
+		if (numAlertas==5){ numAlertas=0;}
+
+		strcpy(enviarAlertaGenerada.ultimasAlertas[numAlertas].fecha,fechaAlerta);
+		strcpy(enviarAlertaGenerada.ultimasAlertas[numAlertas].hora,horaAlerta);
+		numAlertas++;
+
+		printf("\n \n ->ENVIANDO ALERTA...");
+
+
+	printf("\n         ALERTA GENERADA        ");
+
+	printf("\nN° habitacion: %d        ",enviarAlertaGenerada.paciente.numHabitacion);
+
+	printf("\nNombres y apellidos: %s        ",enviarAlertaGenerada.paciente.nombres);
+
+	printf("\nEdad: %s ",enviarAlertaGenerada.paciente.edad); 
+
+	printf("\nHora de la alerta: %s      ",enviarAlertaGenerada.paciente.hora); 
+
+	printf("\nFecha de la alerta: %s  ",enviarAlertaGenerada.paciente.fecha); 
+
+		
+
+
+
+		result_1= enviarnotificacion_2(&enviarAlertaGenerada, clnt);
+			
+		if (result_1 == (bool_t *) NULL) {
+			clnt_perror (clnt, "call failed");
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #ifndef	DEBUG
 	clnt_destroy (clnt);
 #endif	 /* DEBUG */
@@ -119,52 +199,7 @@ void generarPuntuacion(Paciente *paciente, AlertaGenerada * enviarAlertaGenerada
 	}
 
 }
-void generarAlerta(int puntuacion,AlertaGenerada *enviarAlertaGenerada,CLIENT *clnt){
 
-	bool_t *result;
-	static int numAlertas=0;
-	if(puntuacion==2){
-		strcpy(enviarAlertaGenerada->mensaje,"Enviar una enfermera");
-	}else if(puntuacion>2){
-		strcpy(enviarAlertaGenerada->mensaje,"Enviar un medico y una enfermera");
-	}
-
-	// Generar alerta si hay mas de dos puntuciones
-	if(puntuacion>=2){
-		time_t t;
-    	struct tm *tm;
-    	char fechaAlerta[100];
-		char horaAlerta[100];
-    	char* buff;
-		buff=malloc(sizeof(char)*100);
-
-    	t=time(NULL);
-    	tm=localtime(&t);
-    	strftime(fechaAlerta, 100, "%d/%m/%Y", tm);
-		strftime(horaAlerta, 100, "%H:%M:%S", tm);
-		strcpy(enviarAlertaGenerada->paciente.fecha,fechaAlerta); // fecha en que se genero la alerta
-		strcpy(enviarAlertaGenerada->paciente.hora,horaAlerta);  // hora actual 
-		
-		sprintf(buff,"%d-%s-%s-%s-%s\n",enviarAlertaGenerada->paciente.numHabitacion,
-		enviarAlertaGenerada->paciente.nombres,enviarAlertaGenerada->paciente.apellidos,
-		enviarAlertaGenerada->paciente.fecha,enviarAlertaGenerada->paciente.hora);
-		guardarHistoria(buff);
-		free(buff);
-		if (numAlertas==5){ numAlertas=0;}
-
-		strcpy(enviarAlertaGenerada->ultimasAlertas[numAlertas].fecha,fechaAlerta);
-		strcpy(enviarAlertaGenerada->ultimasAlertas[numAlertas].hora,horaAlerta);
-		numAlertas++;
-
-		printf("\n \n ->ENVIANDO ALERTA...");
-
-		result = enviarnotificacion_2(enviarAlertaGenerada, clnt);
-			
-		if (result == (bool_t *) NULL) {
-			clnt_perror (clnt, "call failed");
-		}
-	}
-}
 void guardarHistoria(char *buffer){
 
 	FILE *archivo;

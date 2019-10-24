@@ -14,8 +14,11 @@ xdr_InfoPaciente (XDR *xdrs, InfoPaciente *objp)
 	 if (!xdr_vector (xdrs, (char *)objp->nombres, MAXMSJ,
 		sizeof (char), (xdrproc_t) xdr_char))
 		 return FALSE;
-	 if (!xdr_vector (xdrs, (char *)objp->edad,MAXMSJ,
-	 	sizeof (char), (xdrproc_t) xdr_char))
+	 if (!xdr_vector (xdrs, (char *)objp->apellidos, MAXMSJ,
+		sizeof (char), (xdrproc_t) xdr_char))
+		 return FALSE;
+	 if (!xdr_vector (xdrs, (char *)objp->edad, MAXMSJ,
+		sizeof (char), (xdrproc_t) xdr_char))
 		 return FALSE;
 	 if (!xdr_int (xdrs, &objp->numHabitacion))
 		 return FALSE;
