@@ -6,27 +6,34 @@
 
 #include "notificaciones.h"
 
-bool_t *
-enviarnotificacion_2_svc(AlertaGenerada *argp, struct svc_req *rqstp)
+bool_t *enviarnotificacion_2_svc(AlertaGenerada *argp, struct svc_req *rqstp)
 {
 	static bool_t  result;
+	fflush(stdout);
 
-	printf("\n         ALERTA GENERADA        ");
+	printf("\n\n         ALERTA GENERADA        ");
 
-	printf("\nN° habitacion: %d        ",argp->paciente.numHabitacion);
+	printf("\nN° habitacion: %d",argp->paciente.numHabitacion);
 
-	printf("\nNombres y apellidos: %s        ",argp->paciente.nombres);
+	printf("\nNombres y apellidos: %s %s",argp->paciente.nombres,argp->paciente.apellidos);//TODO NO carga el valor de el apellido aunque en servidor de alertas se guarda bien.
 
-	printf("\nEdad: %s Dias/Meses/Anios",argp->paciente.edad); 
+	printf("\nEdad: %s",argp->paciente.edad); 
 
-	printf("\nHora de la alerta: %s      ",argp->paciente.hora); 
+	printf("\nHora de la alerta: %s",argp->paciente.hora); 
 
-	printf("\nFecha de la alerta: %s  ",argp->paciente.fecha); 
+	printf("\nFecha de la alerta: %s",argp->paciente.fecha); 
 
 
 	printf("\n         Indicadores que generaron la alerta        ");
 
-	printf("\n Nombre Indicador       Valor");
+	printf("\n Nombre Indicador          Valor");
+	for(int i=0; i<5; i++){
+		if (argp->indicadoresAlerta[i].valor!=0)
+		{
+			printf("%s                      %.2f",argp->indicadoresAlerta[i].indicador,argp->indicadoresAlerta[i].valor);
+		}
+		
+	}
 
 	return &result;
 }

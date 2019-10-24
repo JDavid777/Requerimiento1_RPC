@@ -8,145 +8,25 @@
 #include "notificaciones.h"
 #include <time.h>
 
-
-void 
-puntuacionDeLaAlerta(Paciente *paciente,AlertaGenerada *alerta);
+int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char*edades);
 int* ObtenerEdad(char *fecha);
+void guardarHistoria(char* buff);
+void generarAlerta(int puntuacion,AlertaGenerada* enviarAlertaGenereada,CLIENT* clnt);
+void puntuacionDeLaAlerta(Paciente *paciente,AlertaGenerada *alerta);
 void arterialSistolica(Paciente *,AlertaGenerada *,float minimo, float maximo,int *);
-void frecuenciaCardiaca(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion);
-void frecuenciaRespiratoria(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion);
+void frecuenciaCardiaca(Paciente *paciente,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion);
+void frecuenciaRespiratoria(Paciente *paciente,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion);
 void Temperatura(Paciente *,AlertaGenerada *,float minimo, float maximo,int *);
 void arterialDiastolica(Paciente *,AlertaGenerada *,float minimo, float maximo,int *);
-int 
-obtenerGrupo(char *edades){
+void generarPuntuacion(Paciente *paciente, AlertaGenerada * enviarAlertaGenerada,int * puntuacion);
 
-	int *edad=ObtenerEdad(edades);
-
-	//seis semanas
-	if(edad[2]==0 && edad[1]<=1 && edad[0]<=15){
-		return 1;
-	}
-	// 1 año
-	if(edad[2]<1 && edad[1]<12 && edad[0]<=30){
-		return 2;
-	}
-	// 2 años
-	if(edad[2]<2 && edad[1]<12 && edad[0]<=30){
-		return 3;
-	}
-	// 6 años
-		if(edad[2]<6 && edad[1]<12 && edad[0]<=30){
-		return 4;
-	}
-	//13 años
-		if(edad[2]<13 && edad[1]<12 && edad[0]<=30){
-		return 5;
-	}
-	// 16 años
-		if(edad[2]<16 && edad[1]<12 && edad[0]<=30){
-		return 6;
-	}
-
-	//mayores a 16
-	return 7;
-}
-
-bool_t *
-enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
-{
+bool_t *enviarindicadores_1_svc(Paciente *paciente, struct svc_req *rqstp){
 	printf("\n Ejecutando servidor \n");
 	static bool_t result;
-	bool_t *result_1;
 	CLIENT *clnt;
 	AlertaGenerada  enviarAlertaGenerada;
-	
     char * dirIpServidorNotificaciones="localhost";
-	int grupo =obtenerGrupo(argp->edad);
-	printf("\n%d grupo al que pertenece ",grupo);
 	int   puntuacion=0;
-	//Saturacion de oxigeno es igual para todas las edades
-	if(argp->indicadores.saturacionOxigeno<90){
-		puntuacion++;
-	}
-
-	//DATOS PACIENTE
-	strcpy(enviarAlertaGenerada.paciente.nombres,argp->nombres);
-	enviarAlertaGenerada.paciente.numHabitacion=argp->numHabitacion;
-
-	//GENERANDO PUNTUACION 
-	switch (grupo)
-	{
-		case 1:
-			frecuenciaCardiaca(argp,&enviarAlertaGenerada,120,140,&puntuacion);
-			frecuenciaRespiratoria(argp,&enviarAlertaGenerada,40,45,&puntuacion);		 // VERIFICAR SI SE TRANSMITEN LOS DATOS CORRECTAMENTE
-			Temperatura(argp,&enviarAlertaGenerada,38,38,&puntuacion);
-			arterialSistolica(argp,&enviarAlertaGenerada,70,100,&puntuacion);
-			arterialDiastolica(argp,&enviarAlertaGenerada,50,68,&puntuacion);
-			break;
-		case 2:
-			frecuenciaCardiaca(argp,&enviarAlertaGenerada,100,130,&puntuacion);
-			frecuenciaRespiratoria(argp,&enviarAlertaGenerada,20,30,&puntuacion);		 // VERIFICAR SI SE TRANSMITEN LOS DATOS CORRECTAMENTE
-			Temperatura(argp,&enviarAlertaGenerada,37.5,37.8,&puntuacion);
-			arterialSistolica(argp,&enviarAlertaGenerada,84,106,&puntuacion);
-			arterialDiastolica(argp,&enviarAlertaGenerada,56,70,&puntuacion);
-			break;
-		case 3:
-			frecuenciaCardiaca(argp,&enviarAlertaGenerada,100,120,&puntuacion);
-			frecuenciaRespiratoria(argp,&enviarAlertaGenerada,20,30,&puntuacion);		 // VERIFICAR SI SE TRANSMITEN LOS DATOS CORRECTAMENTE
-			Temperatura(argp,&enviarAlertaGenerada,37.5,37.8,&puntuacion);
-			arterialSistolica(argp,&enviarAlertaGenerada,98,106,&puntuacion);
-			arterialDiastolica(argp,&enviarAlertaGenerada,56,70,&puntuacion);
-			
-			break;
-		case 4:
-			frecuenciaCardiaca(argp,&enviarAlertaGenerada,80,120,&puntuacion);
-			frecuenciaRespiratoria(argp,&enviarAlertaGenerada,20,30,&puntuacion);		 // VERIFICAR SI SE TRANSMITEN LOS DATOS CORRECTAMENTE
-			Temperatura(argp,&enviarAlertaGenerada,37.5,37.8,&puntuacion);
-			arterialSistolica(argp,&enviarAlertaGenerada,99,112,&puntuacion);
-			arterialDiastolica(argp,&enviarAlertaGenerada,64,70,&puntuacion);
-
-			break;
-		case 5:
-			frecuenciaCardiaca(argp,&enviarAlertaGenerada,80,100,&puntuacion);
-			frecuenciaRespiratoria(argp,&enviarAlertaGenerada,12,20,&puntuacion);		 // VERIFICAR SI SE TRANSMITEN LOS DATOS CORRECTAMENTE
-			Temperatura(argp,&enviarAlertaGenerada,37,37.5,&puntuacion);
-			arterialSistolica(argp,&enviarAlertaGenerada,104,124,&puntuacion);
-			arterialDiastolica(argp,&enviarAlertaGenerada,64,86,&puntuacion);
-
-
-			break;
-		case 6:
-			frecuenciaCardiaca(argp,&enviarAlertaGenerada,70,80,&puntuacion);
-			frecuenciaRespiratoria(argp,&enviarAlertaGenerada,12,20,&puntuacion);		 // VERIFICAR SI SE TRANSMITEN LOS DATOS CORRECTAMENTE
-			Temperatura(argp,&enviarAlertaGenerada,37,37,&puntuacion);
-			arterialSistolica(argp,&enviarAlertaGenerada,118,132,&puntuacion);
-			arterialDiastolica(argp,&enviarAlertaGenerada,70,82,&puntuacion);
-
-			break;
-		case 7:
-			frecuenciaCardiaca(argp,&enviarAlertaGenerada,60,80,&puntuacion);
-			frecuenciaRespiratoria(argp,&enviarAlertaGenerada,12,20,&puntuacion);		 // VERIFICAR SI SE TRANSMITEN LOS DATOS CORRECTAMENTE
-			Temperatura(argp,&enviarAlertaGenerada,36.2,37.2,&puntuacion);
-			arterialSistolica(argp,&enviarAlertaGenerada,110,140,&puntuacion);
-			arterialDiastolica(argp,&enviarAlertaGenerada,70,90,&puntuacion);		
-			
-			
-			break;
-		
-		default:
-			break;
-	}
-
-	//MENSAJE
-
-	if(puntuacion==2){
-		strcpy(enviarAlertaGenerada.mensaje,"Enviar una enfermera");
-	}else if(puntuacion>2){
-		strcpy(enviarAlertaGenerada.mensaje,"Enviar un medico y una enfermera");
-	}
-
-
-
 
 	#ifndef	DEBUG
 	clnt = clnt_create (dirIpServidorNotificaciones, gestion_notificaciones, gestion_notificaiones_version, "udp");
@@ -155,35 +35,15 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 		exit (1);
 	}
 	#endif	/* DEBUG */
-	// Generar alerta si hay mas de dos puntuciones
-	if(puntuacion>=2){
-		time_t t;
-    	struct tm *tm;
-    	char fechaActual[100];
-		char horaActual[100];
-		int dias , meses;
-    	char* buff;
-		buff=malloc(sizeof(char));
 
-    	t=time(NULL);
-    	tm=localtime(&t);
-    	strftime(fechaActual, 100, "%d/%m/%Y", tm);
-		strftime(horaActual, 100, "%H:%M:%S", tm);
-		strcpy(enviarAlertaGenerada.paciente.fecha,fechaActual); // fecha en que se genero la alerta
-		strcpy(enviarAlertaGenerada.paciente.hora,horaActual);  // hora actual
-		
-		//TODO ... Hay que guardar la informacion de la alerta en un archivo txt
-
-		printf("\n \n ENVIANDO ALERTA...");
-		//TODO AGREGAR A ULTIMAS ALERTAS
-
-		result_1 = enviarnotificacion_2(&enviarAlertaGenerada, clnt);
-			
-		if (result_1 == (bool_t *) NULL) {
-			clnt_perror (clnt, "call failed");
-		}
-	}
-
+	//DATOS PACIENTE
+	strcpy(enviarAlertaGenerada.paciente.nombres,paciente->nombres);
+	strcpy(enviarAlertaGenerada.paciente.apellidos,paciente->apellidos);
+	enviarAlertaGenerada.paciente.numHabitacion=paciente->numHabitacion;
+	generarPuntuacion(paciente,&enviarAlertaGenerada,&puntuacion);
+	generarAlerta(puntuacion,&enviarAlertaGenerada,clnt);
+	
+	
 #ifndef	DEBUG
 	clnt_destroy (clnt);
 #endif	 /* DEBUG */
@@ -191,67 +51,254 @@ enviarindicadores_1_svc(Paciente *argp, struct svc_req *rqstp)
 	return &result;
 }
 
-void frecuenciaCardiaca(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion){
+void generarPuntuacion(Paciente *paciente, AlertaGenerada * enviarAlertaGenerada,int * puntuacion){
+	int grupo = obtenerGrupo(enviarAlertaGenerada,paciente->edad);
+	if(paciente->indicadores.saturacionOxigeno<90){
+		puntuacion++;
+	}
+	switch (grupo)
+	{
+		case 1:
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada,120,140,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada,40,45,puntuacion);		
+			Temperatura(paciente,enviarAlertaGenerada,38,38,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada,70,100,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada,50,68,puntuacion);
+			break;
 
-			if(argp->indicadores.frecuenciaCardiaca<minimo || 
-				argp->indicadores.frecuenciaCardiaca>maximo ){
-				strcpy(enviarAlertaGenerada->indicadoresAlerta[0].indicador,"frecuencia cardiaca");
-				enviarAlertaGenerada->indicadoresAlerta[0].valor=argp->indicadores.frecuenciaCardiaca;
-				
-				*puntuacion=(int)((int)*puntuacion + 1);
+		case 2:
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada,100,130,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada,20,30,puntuacion);
+			Temperatura(paciente,enviarAlertaGenerada,37.5,37.8,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada,84,106,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada,56,70,puntuacion);
+			break;
 
-				
+		case 3:
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada,100,120,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada,20,30,puntuacion);
+			Temperatura(paciente,enviarAlertaGenerada,37.5,37.8,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada,98,106,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada,56,70,puntuacion);
+			break;
 
-			}
+		case 4:
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada,80,120,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada,20,30,puntuacion);
+			Temperatura(paciente,enviarAlertaGenerada,37.5,37.8,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada,99,112,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada,64,70,puntuacion);
+			break;
+
+		case 5:
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada,80,100,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada,12,20,puntuacion);
+			Temperatura(paciente,enviarAlertaGenerada,37,37.5,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada,104,124,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada,64,86,puntuacion);
+			break;
+
+		case 6:
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada,70,80,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada,12,20,puntuacion);
+			Temperatura(paciente,enviarAlertaGenerada,37,37,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada,118,132,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada,70,82,puntuacion);
+			break;
+
+		case 7:
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada,60,80,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada,12,20,puntuacion);	
+			Temperatura(paciente,enviarAlertaGenerada,36.2,37.2,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada,110,140,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada,70,90,puntuacion);		
+			break;
+		
+		default:
+			break;
+	}
+
+}
+void generarAlerta(int puntuacion,AlertaGenerada *enviarAlertaGenerada,CLIENT *clnt){
+
+	bool_t *result;
+	static int numAlertas=0;
+	if(puntuacion==2){
+		strcpy(enviarAlertaGenerada->mensaje,"Enviar una enfermera");
+	}else if(puntuacion>2){
+		strcpy(enviarAlertaGenerada->mensaje,"Enviar un medico y una enfermera");
+	}
+
+	// Generar alerta si hay mas de dos puntuciones
+	if(puntuacion>=2){
+		time_t t;
+    	struct tm *tm;
+    	char fechaAlerta[100];
+		char horaAlerta[100];
+    	char* buff;
+		buff=malloc(sizeof(char)*100);
+
+    	t=time(NULL);
+    	tm=localtime(&t);
+    	strftime(fechaAlerta, 100, "%d/%m/%Y", tm);
+		strftime(horaAlerta, 100, "%H:%M:%S", tm);
+		strcpy(enviarAlertaGenerada->paciente.fecha,fechaAlerta); // fecha en que se genero la alerta
+		strcpy(enviarAlertaGenerada->paciente.hora,horaAlerta);  // hora actual 
+		
+		sprintf(buff,"%d-%s-%s-%s-%s\n",enviarAlertaGenerada->paciente.numHabitacion,
+		enviarAlertaGenerada->paciente.nombres,enviarAlertaGenerada->paciente.apellidos,
+		enviarAlertaGenerada->paciente.fecha,enviarAlertaGenerada->paciente.hora);
+		guardarHistoria(buff);
+		free(buff);
+		if (numAlertas==5){ numAlertas=0;}
+
+		strcpy(enviarAlertaGenerada->ultimasAlertas[numAlertas].fecha,fechaAlerta);
+		strcpy(enviarAlertaGenerada->ultimasAlertas[numAlertas].hora,horaAlerta);
+		numAlertas++;
+
+		printf("\n \n ->ENVIANDO ALERTA...");
+
+		result = enviarnotificacion_2(enviarAlertaGenerada, clnt);
+			
+		if (result == (bool_t *) NULL) {
+			clnt_perror (clnt, "call failed");
+		}
+	}
+}
+void guardarHistoria(char *buffer){
+
+	FILE *archivo;
+	char lineaLeida[100];
+
+	archivo = fopen("historiaDelAlertas.txt","a");
+
+	if (archivo == NULL)
+	{
+		printf("Error al abrir el archivo");
+	} 		
+	else
+	{
+		
+		fputs(buffer,archivo);
+		printf("\n ->Alerta guardada exitosamente.\n");
+		fclose(archivo);
+	}
+}
+void frecuenciaCardiaca(Paciente *paciente,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion){
+
+	if(paciente->indicadores.frecuenciaCardiaca<minimo || paciente->indicadores.frecuenciaCardiaca>maximo ){
+		strcpy(enviarAlertaGenerada->indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+		enviarAlertaGenerada->indicadoresAlerta[0].valor=paciente->indicadores.frecuenciaCardiaca;	
+		*puntuacion=(int)((int)*puntuacion + 1);
+	}
 }
 void frecuenciaRespiratoria(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion){
 		
-			if(argp->indicadores.frecuenciaRespiratoria<minimo || 
-				argp->indicadores.frecuenciaCardiaca>maximo ){
-				strcpy(enviarAlertaGenerada->indicadoresAlerta[1].indicador,"frecuencia Respiratoria");
-				enviarAlertaGenerada->indicadoresAlerta[1].valor=argp->indicadores.frecuenciaRespiratoria;
-				*puntuacion=(int)((int)*puntuacion + 1);
-				
-			}
+	if(argp->indicadores.frecuenciaRespiratoria<minimo || 
+		argp->indicadores.frecuenciaCardiaca>maximo ){
+		strcpy(enviarAlertaGenerada->indicadoresAlerta[1].indicador,"frecuencia Respiratoria");
+		enviarAlertaGenerada->indicadoresAlerta[1].valor=argp->indicadores.frecuenciaRespiratoria;
+		*puntuacion=(int)((int)*puntuacion + 1);
+			
+	}
 }
-void Temperatura(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion){
+void Temperatura(Paciente *paciente,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion){
 
 		
-			if(argp->indicadores.temperatura<minimo || 
-				argp->indicadores.temperatura>maximo ){
+	if(paciente->indicadores.temperatura<minimo || paciente->indicadores.temperatura>maximo ){
 
-				strcpy(enviarAlertaGenerada->indicadoresAlerta[2].indicador,"Temperatura");
-				enviarAlertaGenerada->indicadoresAlerta[2].valor=argp->indicadores.temperatura;
-				*puntuacion=(int)((int)*puntuacion + 1);
-			}
+		strcpy(enviarAlertaGenerada->indicadoresAlerta[2].indicador,"Temperatura");
+		enviarAlertaGenerada->indicadoresAlerta[2].valor=paciente->indicadores.temperatura;
+		*puntuacion=(int)((int)*puntuacion + 1);
+	}			
 }
-void arterialSistolica(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion){
+void arterialSistolica(Paciente *paciente,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion){
 	//Tension arterial sistolica
 	
-			if(argp->indicadores.frecuenciaCardiaca<minimo || 
-				argp->indicadores.frecuenciaCardiaca>maximo ){
+	if(paciente->indicadores.frecuenciaCardiaca<minimo || 
+		paciente->indicadores.frecuenciaCardiaca>maximo ){
 					
-				strcpy(enviarAlertaGenerada->indicadoresAlerta[3].indicador,"Presion arterial sistloca");
-				enviarAlertaGenerada->indicadoresAlerta[3].valor=argp->indicadores.presionArterialSistolica;
-				*puntuacion=(int)((int)*puntuacion + 1);
-			}
+		strcpy(enviarAlertaGenerada->indicadoresAlerta[3].indicador,"Presion arterial sistloca");
+		enviarAlertaGenerada->indicadoresAlerta[3].valor=paciente->indicadores.presionArterialSistolica;
+		*puntuacion=(int)((int)*puntuacion + 1);
+	}
 }
-void arterialDiastolica(Paciente *argp,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion){
+void arterialDiastolica(Paciente *paciente,AlertaGenerada *enviarAlertaGenerada,float minimo, float maximo,int *puntuacion){
+	
+	if(paciente->indicadores.frecuenciaCardiaca<minimo || 
+		paciente->indicadores.frecuenciaCardiaca>maximo ){
+		strcpy(enviarAlertaGenerada->indicadoresAlerta[4].indicador,"Presion arterial diastolica");
+		enviarAlertaGenerada->indicadoresAlerta[4].valor=paciente->indicadores.presionArterialSistolica;
+		*puntuacion=(int)((int)*puntuacion + 1);
+	}
+}
+int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char *edades){
 
-			
-			if(argp->indicadores.frecuenciaCardiaca<minimo || 
-				argp->indicadores.frecuenciaCardiaca>maximo ){
-				strcpy(enviarAlertaGenerada->indicadoresAlerta[4].indicador,"Presion arterial diastolica");
-				enviarAlertaGenerada->indicadoresAlerta[4].valor=argp->indicadores.presionArterialSistolica;
-				*puntuacion=(int)((int)*puntuacion + 1);
-			}
+	int *edadExacta=ObtenerEdad(edades);
+	char *edad;
+	edad=malloc(sizeof(char)*100);
+	//seis semanas
+	if(edadExacta[0]==0 && edadExacta[1]==0 && edadExacta[2]<=6){
+		if (edadExacta[2]==0)
+		{
+			sprintf(edad,"%d Dias",edadExacta[2]);
+			strcpy(enviarAlertaGenerada->paciente.edad,edad);
+		}
+		else{
+			sprintf(edad,"%d Semanas con %d dias",edadExacta[2],edadExacta[3]);
+			strcpy(enviarAlertaGenerada->paciente.edad,edad);
+		}
+		
+		return 1;
+	}
+	// 1 año
+	if(edadExacta[0]<=1){
+		if (edadExacta[1]==0)
+		{
+			sprintf(edad,"%d Semanas y %d dias",edadExacta[2],edadExacta[3]);
+			strcpy(enviarAlertaGenerada->paciente.edad,edad);
+		}
+		else{
+			sprintf(edad,"%d Meses con %d Semanas y %d dias",edadExacta[1],edadExacta[2],edadExacta[3]);
+			strcpy(enviarAlertaGenerada->paciente.edad,edad);
+		}
+		return 2;
+	}
+	// 2 años
+	if(edadExacta[0]<=2){
+		sprintf(edad,"%d Años",edadExacta[0]);
+		strcpy(enviarAlertaGenerada->paciente.edad,edad);
+		return 3;
+	}
+	// 6 años
+		if(edadExacta[0]<=6){
+		sprintf(edad,"%d Años",edadExacta[0]);
+		strcpy(enviarAlertaGenerada->paciente.edad,edad);
+		return 4;
+	}
+	//13 años
+		if(edadExacta[0]<=13){
+		sprintf(edad,"%d Años",edadExacta[0]);
+		strcpy(enviarAlertaGenerada->paciente.edad,edad);
+		return 5;
+	}
+	// 16 años
+		if(edadExacta[0]<=16){
+		sprintf(edad,"%d Años",edadExacta[0]);
+		strcpy(enviarAlertaGenerada->paciente.edad,edad);
+		return 6;
+	}
+
+	//mayores a 16
+	sprintf(edad,"%d Años",edadExacta[0]);
+	strcpy(enviarAlertaGenerada->paciente.edad,edad);
+	return 7;
 }
-int*
-ObtenerEdad(char *fecha){       
+int* ObtenerEdad(char *fecha){
    int *resultFecha;
    int idx=0;
-   resultFecha=malloc(3);
-    char delimitador[] = "/";
+   resultFecha=malloc(4);
+    char delimitador[] = "-";
     char *token = strtok(fecha, delimitador);
     if(token != NULL){
         for (int i=0; i<3;i++)

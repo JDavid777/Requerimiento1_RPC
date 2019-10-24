@@ -4,6 +4,7 @@ const MAXMSJ = 70;
 struct InfoPaciente{
 
 	char nombres[MAXMSJ];
+    char apellidos[MAXMSJ];
 	char edad[MAXMSJ];
 	int numHabitacion;
     char hora[10];

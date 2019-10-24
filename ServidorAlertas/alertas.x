@@ -13,6 +13,7 @@ struct Indicadores{
 struct Paciente{
 
 	char nombres[MAXNOM];
+	char apellidos[MAXNOM];
 	char edad[MAXNOM];
 	int numHabitacion;
 	Indicadores indicadores;
