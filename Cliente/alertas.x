@@ -1,4 +1,4 @@
-const MAXNOM = 30;
+const MAXNOM = 100;
 
 struct Indicadores{
 

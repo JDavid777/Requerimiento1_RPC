@@ -1,4 +1,4 @@
-const MAXMSJ = 70;
+const MAXMSJ = 100;
 
 
 struct InfoPaciente{
@@ -7,8 +7,8 @@ struct InfoPaciente{
     char apellidos[MAXMSJ];
 	char edad[MAXMSJ];
 	int numHabitacion;
-    char hora[10];
-    char fecha[50];
+    char hora[MAXMSJ];
+    char fecha[MAXMSJ];
 };
 
 struct IndicadoresAlerta{
@@ -17,8 +17,8 @@ struct IndicadoresAlerta{
 };
 
 struct UltimasAlertas{
-    char fecha[50];
-    char hora[10];
+    char fecha[MAXMSJ];
+    char hora[MAXMSJ];
     int puntuacion;
 };
 

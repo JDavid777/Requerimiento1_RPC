@@ -13,15 +13,15 @@
 extern "C" {
 #endif
 
-#define MAXMSJ 70
+#define MAXMSJ 100
 
 struct InfoPaciente {
 	char nombres[MAXMSJ];
 	char apellidos[MAXMSJ];
 	char edad[MAXMSJ];
 	int numHabitacion;
-	char hora[10];
-	char fecha[50];
+	char hora[MAXMSJ];
+	char fecha[MAXMSJ];
 };
 typedef struct InfoPaciente InfoPaciente;
 
@@ -32,8 +32,8 @@ struct IndicadoresAlerta {
 typedef struct IndicadoresAlerta IndicadoresAlerta;
 
 struct UltimasAlertas {
-	char fecha[50];
-	char hora[10];
+	char fecha[MAXMSJ];
+	char hora[MAXMSJ];
 	int puntuacion;
 };
 typedef struct UltimasAlertas UltimasAlertas;

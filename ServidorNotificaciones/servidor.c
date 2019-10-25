@@ -6,16 +6,15 @@
 
 #include "notificaciones.h"
 
-bool_t *enviarnotificacion_2_svc(AlertaGenerada *argp, struct svc_req *rqstp)
-{
+bool_t *enviarnotificacion_2_svc(AlertaGenerada *argp, struct svc_req *rqstp){
+
 	static bool_t  result;
-	fflush(stdout);
 
 	printf("\n\n         ALERTA GENERADA        ");
 
 	printf("\nN° habitacion: %d",argp->paciente.numHabitacion);
 
-	printf("\nNombres y apellidos: %s %s",argp->paciente.nombres,argp->paciente.apellidos);//TODO NO carga el valor de el apellido aunque en servidor de alertas se guarda bien.
+	printf("\nNombres y apellidos: %s %s",argp->paciente.nombres,argp->paciente.apellidos);
 
 	printf("\nEdad: %s",argp->paciente.edad); 
 

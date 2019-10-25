@@ -13,7 +13,7 @@
 extern "C" {
 #endif
 
-#define MAXNOM 30
+#define MAXNOM 100
 
 struct Indicadores {
 	float frecuenciaCardiaca;

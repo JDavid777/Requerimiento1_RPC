@@ -133,19 +133,19 @@ void generarAlerta(int puntuacion,AlertaGenerada *enviarAlertaGenerada,CLIENT *c
 	if(puntuacion>=2){
 		time_t t;
     	struct tm *tm;
-    	char fechaAlerta[100];
-		char horaAlerta[100];
+    	char fechaAlerta[MAXNOM];
+		char horaAlerta[MAXNOM];
     	char* buff;
-		buff=malloc(sizeof(char)*100);
+		buff=malloc(sizeof(char)*300);
 
     	t=time(NULL);
     	tm=localtime(&t);
-    	strftime(fechaAlerta, 100, "%d/%m/%Y", tm);
-		strftime(horaAlerta, 100, "%H:%M:%S", tm);
+    	strftime(fechaAlerta, MAXNOM, "%d/%m/%Y", tm);
+		strftime(horaAlerta, MAXNOM, "%H:%M:%S", tm);
 		strcpy(enviarAlertaGenerada->paciente.fecha,fechaAlerta); // fecha en que se genero la alerta
 		strcpy(enviarAlertaGenerada->paciente.hora,horaAlerta);  // hora actual 
 		
-		sprintf(buff,"%d-%s-%s-%s-%s\n",enviarAlertaGenerada->paciente.numHabitacion,
+		sprintf(buff,"N°-habitacion: %d--Paciente: %s-%s--Fecha y hora de la alerta: %s-%s\n",enviarAlertaGenerada->paciente.numHabitacion,
 		enviarAlertaGenerada->paciente.nombres,enviarAlertaGenerada->paciente.apellidos,
 		enviarAlertaGenerada->paciente.fecha,enviarAlertaGenerada->paciente.hora);
 		guardarHistoria(buff);
@@ -155,6 +155,23 @@ void generarAlerta(int puntuacion,AlertaGenerada *enviarAlertaGenerada,CLIENT *c
 		strcpy(enviarAlertaGenerada->ultimasAlertas[numAlertas].fecha,fechaAlerta);
 		strcpy(enviarAlertaGenerada->ultimasAlertas[numAlertas].hora,horaAlerta);
 		numAlertas++;
+
+		printf("\n\n         ALERTA GENERADA        ");
+
+		printf("\nN° habitacion: %d",enviarAlertaGenerada->paciente.numHabitacion);
+		printf("\nNombres y apellidos: %s %s",enviarAlertaGenerada->paciente.nombres,enviarAlertaGenerada->paciente.apellidos);//TODO NO carga el valor de el apellido aunque en servidor de alertas se guarda bien.
+		printf("\nEdad: %s",enviarAlertaGenerada->paciente.edad); 
+		printf("\nHora de la alerta: %s",enviarAlertaGenerada->paciente.hora); 
+		printf("\nFecha de la alerta: %s",enviarAlertaGenerada->paciente.fecha); 
+		printf("\n         Indicadores que generaron la alerta        ");
+		printf("\n Nombre Indicador          Valor");
+		for(int i=0; i<5; i++){
+			if (enviarAlertaGenerada->indicadoresAlerta[i].valor!=0)
+			{
+				printf("%s                      %.2f",enviarAlertaGenerada->indicadoresAlerta[i].indicador,enviarAlertaGenerada->indicadoresAlerta[i].valor);
+			}
+			
+		}
 
 		printf("\n \n ->ENVIANDO ALERTA...");
 
@@ -168,7 +185,7 @@ void generarAlerta(int puntuacion,AlertaGenerada *enviarAlertaGenerada,CLIENT *c
 void guardarHistoria(char *buffer){
 
 	FILE *archivo;
-	char lineaLeida[100];
+	char lineaLeida[MAXNOM];
 
 	archivo = fopen("historiaDelAlertas.txt","a");
 
@@ -236,7 +253,7 @@ int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char *edades){
 
 	int *edadExacta=ObtenerEdad(edades);
 	char *edad;
-	edad=malloc(sizeof(char)*100);
+	edad=malloc(sizeof(char)*MAXNOM);
 	//seis semanas
 	if(edadExacta[0]==0 && edadExacta[1]==0 && edadExacta[2]<=6){
 		if (edadExacta[2]==0)

@@ -183,14 +183,14 @@ char* calcularEdad(char *fecha){
 
     time_t t;
     struct tm *tm;
-    char fechaActual[100];
+    char fechaActual[MAXNOM];
 	int dias , semanas, meses;
     char* buff;
-	buff=malloc(sizeof(char));
+	buff=malloc(sizeof(char)*MAXNOM);
 
     t=time(NULL);
     tm=localtime(&t);
-    strftime(fechaActual, 100, "%d/%m/%Y", tm);
+    strftime(fechaActual, MAXNOM, "%d/%m/%Y", tm);
     int *fechaAct=partirFecha(fechaActual);
     int* fechaNac= partirFecha(fecha);
 	int anios = fechaAct[2]-fechaNac[2];
