@@ -52,7 +52,7 @@ bool_t *enviarindicadores_1_svc(Paciente *paciente, struct svc_req *rqstp){
 }
 
 void generarPuntuacion(Paciente *paciente, AlertaGenerada * enviarAlertaGenerada,int * puntuacion){
-	int grupo = obtenerGrupo(enviarAlertaGenerada,paciente->edad);
+	int grupo = obtenerGrupo(enviarAlertaGenerada,paciente->edad);;
 	if(paciente->indicadores.saturacionOxigeno<90){
 		puntuacion++;
 	}
@@ -158,28 +158,14 @@ void generarAlerta(int puntuacion,AlertaGenerada *enviarAlertaGenerada,CLIENT *c
 
 		printf("\n\n         ALERTA GENERADA        ");
 
-		printf("\nN° habitacion: %d",enviarAlertaGenerada->paciente.numHabitacion);
-		printf("\nNombres y apellidos: %s %s",enviarAlertaGenerada->paciente.nombres,enviarAlertaGenerada->paciente.apellidos);//TODO NO carga el valor de el apellido aunque en servidor de alertas se guarda bien.
-		printf("\nEdad: %s",enviarAlertaGenerada->paciente.edad); 
-		printf("\nHora de la alerta: %s",enviarAlertaGenerada->paciente.hora); 
-		printf("\nFecha de la alerta: %s",enviarAlertaGenerada->paciente.fecha); 
-		printf("\n         Indicadores que generaron la alerta        ");
-		printf("\n Nombre Indicador          Valor");
-		for(int i=0; i<5; i++){
-			if (enviarAlertaGenerada->indicadoresAlerta[i].valor!=0)
-			{
-				printf("%s                      %.2f",enviarAlertaGenerada->indicadoresAlerta[i].indicador,enviarAlertaGenerada->indicadoresAlerta[i].valor);
-			}
-			
-		}
-
-		printf("\n \n ->ENVIANDO ALERTA...");
+		printf("\n \n ->!ENVIANDO ALERTA...¡");
 
 		result = enviarnotificacion_2(enviarAlertaGenerada, clnt);
 			
 		if (result == (bool_t *) NULL) {
 			clnt_perror (clnt, "call failed");
 		}
+		printf("\n \n ->!ALERTA ENVIADA CON EXITO...¡");
 	}
 }
 void guardarHistoria(char *buffer){
