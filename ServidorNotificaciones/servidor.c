@@ -23,16 +23,30 @@ bool_t *enviarnotificacion_2_svc(AlertaGenerada *argp, struct svc_req *rqstp){
 	printf("\nFecha de la alerta: %s",argp->paciente.fecha); 
 
 
-	printf("\n         Indicadores que generaron la alerta        ");
+	printf("\n\n***         Indicadores que generaron la alerta        ***\n");
 
-	printf("\n Nombre Indicador          Valor");
+	printf("\n      Nombre Indicador                              Valor\n");
 	for(int i=0; i<5; i++){
 		if (argp->indicadoresAlerta[i].valor!=0)
 		{
-			printf("%s                      %.2f",argp->indicadoresAlerta[i].indicador,argp->indicadoresAlerta[i].valor);
+			if (argp->indicadoresAlerta[i].valor > 0)
+			{
+				printf("-> %s                      %.2f\n",argp->indicadoresAlerta[i].indicador,argp->indicadoresAlerta[i].valor);
+
+			}
+			
 		}
 		
 	}
+
+	printf("%s\n", argp->mensaje);
+	printf("\n Fecha de la alerta                   Hora de la alerta                    Puntuacion\n");
+	for(int i=0; i<5; i++){
+
+				printf("-> %s                      %s                           %d\n",argp->ultimasAlertas[i].fecha,argp->ultimasAlertas[i].hora,argp->ultimasAlertas[i].puntuacion);
+		
+	}
+
 
 	return &result;
 }

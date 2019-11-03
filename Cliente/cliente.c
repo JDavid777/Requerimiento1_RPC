@@ -57,6 +57,7 @@ exit (0);
  * Muestra y gestiona el menu de opciones de el host cliente
  **/
 void menu(Paciente *paciente,CLIENT *clnt){
+	char aux[2];
 	int opcion=0;
 	bool_t flag=FALSE;
 	do{
@@ -67,25 +68,50 @@ void menu(Paciente *paciente,CLIENT *clnt){
 			printf("|-3. Terminar                         |\n");
 			printf("|*************************************|\n");
 			printf("Seleccione una opcion: \n ->");
-			scanf("%d",&opcion);
+			fgets(aux,2,stdin);
+			strtok(aux,"\n");
 			//limpiarStdin();
-
-			switch (opcion)
+			opcion=atoi(aux);
+			if (opcion>0)
 			{
-			case 1: ingresarDatosPaciente(paciente); flag=TRUE; 
-				break;
-			case 2: 
-				if (flag==TRUE)
-					comenzarLecturaSensores(paciente,clnt); 
-				else
-					printf("ALERTA! \nDebe Ingresar los datos del paciente de la habitacion\n");
-				break;
-			case 3: printf("Saliendo...");break;
+				switch (opcion)
+				{
+				case 1:
+					if (flag==FALSE)
+					{
+						ingresarDatosPaciente(paciente); flag=TRUE; 
+					}
+					else{
+						char respuesta[10];
+						printf("EL paciente %s %s se encuentra registrado, ¿el paciente se murio o fue dado de alta? \n Presione s para resistrar uno nuevo o n para descartar.\n ->", 
+						paciente->nombres,paciente->apellidos);
+						scanf("%s",respuesta);
+						if (strcmp(respuesta,"s") == 0)
+						{
+							ingresarDatosPaciente(paciente);
+						}
+					}	 
+					
+					break;
+				case 2: 
+					if (flag==TRUE)
+						comenzarLecturaSensores(paciente,clnt); 
+					else
+						printf("ALERTA! \nDebe Ingresar los datos del paciente de la habitacion\n");
+					break;
+				case 3: printf("Saliendo...");break;
 
-			default: printf("Opcion no valida.\n por favor ingresar una opcion correcta\n");			
-			}		
+				default: printf("Opcion no valida.\n por favor ingresar una opcion correcta\n");			
+				}		
+			}
+			else
+			{
+				printf("¡No selecciono nada.!\n");	
+			}
+			
 	}
 	while(opcion!=3);
+	
 }
 /**
  * Funcion que permite el registro del paciente;
@@ -94,6 +120,7 @@ void menu(Paciente *paciente,CLIENT *clnt){
 
 void ingresarDatosPaciente(Paciente *paciente){
 	
+	bool_t flag=FALSE;
 	limpiarStdin();
 	printf("\n-- INGRESANDO DATOS DEL PACIENTE --");
 
@@ -105,17 +132,47 @@ void ingresarDatosPaciente(Paciente *paciente){
 	fgets(paciente->apellidos,MAXNOM,stdin);
 	strtok(paciente->apellidos,"\n");
 
-	printf("\nFecha nacimiento en formato dd/mm/yyyy: ");
-	char *fecha=malloc(sizeof(char));
-	fgets(fecha,20,stdin);
-	strtok(fecha,"\n");
-	char *edad=calcularEdad(fecha);
-	strcpy(paciente->edad,edad);
-	free(edad);
+	while(flag==FALSE){
+		
+		printf("\nFecha nacimiento en formato dd/mm/yyyy: ");
+		char *fecha=malloc(sizeof(char));
+		fgets(fecha,20,stdin);
+		strtok(fecha,"\n");
+		char *edad=calcularEdad(fecha);
 
-	printf("\nNumero Habitacion: ");
-	scanf("%d",&paciente->numHabitacion);
-	limpiarStdin();
+		if (edad!=NULL){	
+			strcpy(paciente->edad,edad);
+			free(edad);
+			flag=TRUE;
+		}
+		else{
+			printf("\nFecha invalida. Intente Nuevamente.\n");
+		}
+		
+	}
+	flag=FALSE;
+	while (flag==FALSE)
+	{
+		int habitacion=0;
+		printf("\nNumero Habitacion: ");
+		scanf("%d",&habitacion);
+		if (habitacion>100&&habitacion<1000)
+		{
+			paciente->numHabitacion=habitacion;
+			flag=TRUE;
+		}
+		else
+		{
+			printf("\nNumero de habitacion invalida: El numero debe estar entre 100 y 999\n");
+			printf("Intente nuevamente\n");
+		}
+		limpiarStdin();
+		
+	}
+	
+	printf("\n-> ¡Paciente registrado con exito.!\n");
+	sleep(1);
+	
 }
 
 /**
@@ -164,7 +221,7 @@ int* partirFecha(char *fecha){
     if(token != NULL){
         for (int i=0; i<3;i++)
         {
-            int aux=atoi(token);
+              int aux=atoi(token);
             resultFecha[idx]=aux;
             token = strtok(NULL, delimitador);
             idx++;
@@ -191,33 +248,40 @@ char* calcularEdad(char *fecha){
     t=time(NULL);
     tm=localtime(&t);
     strftime(fechaActual, MAXNOM, "%d/%m/%Y", tm);
-    int *fechaAct=partirFecha(fechaActual);
-    int* fechaNac= partirFecha(fecha);
-	int anios = fechaAct[2]-fechaNac[2];
-        
-	if ( fechaAct[2] < fechaNac[2]  )
-    {   //En caso de ser menor la fecha actual que el nacimiento
-        fechaAct[2] = fechaAct[2] + 30; // Se le suma los 30 días (1 mes) a la fecha actual
-        fechaAct[1] = fechaAct[1] - 1; // Se le resta un mes (30 días) al mes actual
-        dias =  fechaAct[2] - fechaNac[2]; //Se le resta fecha nacimiento al actual
-    }
-    else //En caso de ser mayor la fecha actual que el nacimiento
-        dias =  fechaAct[2] - fechaNac[2];  //Se le resta fecha nacimiento al actual
-
-    if( fechaAct[1] < fechaNac[1] )
-    {   //En caso de ser menor el mes actual que el nacimiento
-        fechaAct[1] = fechaAct[1] + 12; // Se le suma los 12 meses (1 año) al mes actual
-        fechaAct[2] = fechaAct[2] - 1 ; // Se le resta 1 año ( 12 meses) al año actual
-        meses = fechaAct[1] - fechaNac[1]; //Se le resta año nacimiento al actual
-    }
-    else //En caso de ser mayor el mes actual que el nacimiento
-        meses = fechaAct[1] - fechaNac[1]; //Se le resta año nacimiento al actual
-
-	semanas=dias/7;
-	dias=dias-semanas*7;
-    sprintf(buff,"%d-%d-%d-%d",fechaAct[2]-fechaNac[2],meses,semanas,dias); //Años-Meses-Semanas_Dias
+	int *fechaAct=partirFecha(fechaActual);
+	int* fechaNac= partirFecha(fecha);
+	if ((fechaNac[2] > 1900 && fechaNac[2] <= fechaAct[2]) && (fechaNac[1] > 0 && fechaNac[1] < 13) && (fechaNac[0] > 0 && fechaNac[0] < 32)){
+		
 	
-	return buff;
+		int anios = fechaAct[2]-fechaNac[2];
+			
+		if ( fechaAct[2] < fechaNac[2]  )
+		{   //En caso de ser menor la fecha actual que el nacimiento
+			fechaAct[2] = fechaAct[2] + 30; // Se le suma los 30 días (1 mes) a la fecha actual
+			fechaAct[1] = fechaAct[1] - 1; // Se le resta un mes (30 días) al mes actual
+			dias =  fechaAct[2] - fechaNac[2]; //Se le resta fecha nacimiento al actual
+		}
+		else //En caso de ser mayor la fecha actual que el nacimiento
+			dias =  fechaAct[2] - fechaNac[2];  //Se le resta fecha nacimiento al actual
+
+		if( fechaAct[1] < fechaNac[1] )
+		{   //En caso de ser menor el mes actual que el nacimiento
+			fechaAct[1] = fechaAct[1] + 12; // Se le suma los 12 meses (1 año) al mes actual
+			fechaAct[2] = fechaAct[2] - 1 ; // Se le resta 1 año ( 12 meses) al año actual
+			meses = fechaAct[1] - fechaNac[1]; //Se le resta año nacimiento al actual
+		}
+		else //En caso de ser mayor el mes actual que el nacimiento
+			meses = fechaAct[1] - fechaNac[1]; //Se le resta año nacimiento al actual
+
+		semanas=dias/7;
+		dias=dias-semanas*7;
+		sprintf(buff,"%d-%d-%d-%d",fechaAct[2]-fechaNac[2],meses,semanas,dias); //Años-Meses-Semanas_Dias
+		return buff;
+	
+	 }
+	 
+	return NULL;
+	
 }
 void limpiarStdin(){
 	char c;
