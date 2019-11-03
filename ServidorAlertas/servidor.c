@@ -415,4 +415,3 @@ int* ObtenerEdad(char *fecha){
 	
 	return resultFecha;
 }
-

@@ -1,0 +1,830 @@
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:34:37
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:34:41
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:34:45
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:34:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:34:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:34:49
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:34:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:34:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:34:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:04
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:06
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:10
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:21
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:31
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:36
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:40
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:35:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:36:02
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:36:03
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:36:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:36:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:36:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:36:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:36:22
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:36:28
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:36:32
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:36:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:36:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:36:51
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:36:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:00
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:28
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:35
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:37
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:41
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:42
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:51
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:52
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:37:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:21
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:29
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:30
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:36
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:43
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:44
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:49
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:52
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:38:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:39:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:39:02
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:39:10
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 24/10/2019-21:39:22
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 24/10/2019-21:40:19
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 24/10/2019-21:40:20
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 24/10/2019-21:40:31
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:49:41
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:49:42
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:49:53
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:49:57
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:50:01
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:50:11
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:50:13
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:50:23
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:50:29
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:50:31
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:50:47
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:50:51
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:50:52
+N°-habitacion: 123--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-09:50:54
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:23:15
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:23:16
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:23:27
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:23:31
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:23:35
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:23:45
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:23:47
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:23:57
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:03
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:05
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:21
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:25
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:26
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:28
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:33
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:34
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:36
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:37
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:38
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:41
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:47
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:48
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:49
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:55
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:24:58
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:05
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:13
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:14
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:15
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:16
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:19
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:23
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:24
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:28
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:32
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:36
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:37
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:39
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:40
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:44
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:46
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:50
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:55
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:25:57
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:01
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:08
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:09
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:12
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:16
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:22
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:27
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:30
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:31
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:37
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:44
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:49
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:53
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:54
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:26:58
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:27:00
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:27:03
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:27:08
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:27:13
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:27:19
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:27:23
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:27:24
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:27:37
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:27:42
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:27:44
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:27:51
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:27:56
+N°-habitacion: 122--Paciente: Juan David-Garcia Velasco--Fecha y hora de la alerta: 25/10/2019-10:27:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:33:35
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:33:36
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:33:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:33:51
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:33:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:23
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:41
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:45
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:54
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:56
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:57
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:34:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:34
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:35
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:36
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:43
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:44
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:52
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:56
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:57
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:35:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:00
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:04
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:06
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:10
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:21
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:28
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:29
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:32
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:36
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:42
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:50
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:51
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:36:57
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:37:04
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:37:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:37:13
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:37:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:37:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:37:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:37:23
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:37:28
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:37:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:37:38
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:37:44
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:37:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:37:49
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:02
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:10
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:22
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:34
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:35
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:37
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:43
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:45
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:52
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:54
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:56
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:38:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:39:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:39:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:39:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:39:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:39:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:39:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:39:38
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:39:43
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:39:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:39:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:39:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:00
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:03
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:04
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:06
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:19
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:27
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:43
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:51
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:57
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:40:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:41:02
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:41:03
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:41:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:41:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:41:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:41:23
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:41:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:41:42
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:41:43
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:41:56
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:41:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:03
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:13
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:31
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:32
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:45
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:52
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:54
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:42:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:43:00
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:43:03
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:43:10
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:43:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:43:19
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:43:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:43:24
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:43:28
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:43:30
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:43:34
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:43:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:44:24
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:44:49
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:49
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:57
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:45:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:46:00
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:46:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:46:06
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:46:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:46:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:46:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:46:27
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:46:30
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:46:35
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:46:37
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:46:44
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:46:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:03
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:22
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:23
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:27
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:29
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:30
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:31
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:34
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:36
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:38
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:42
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:52
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:47:56
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:11
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:13
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:22
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:27
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:40
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:41
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:48:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:00
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:03
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:10
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:11
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:19
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:22
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:23
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:24
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:29
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:34
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:57
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:49:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:50:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:50:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:50:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:50:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:50:27
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:50:29
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:50:42
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:50:50
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:50:54
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:04
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:06
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:23
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:27
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:28
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:36
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:38
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:45
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:51:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:52:00
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:52:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:52:06
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:52:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:52:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:52:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:52:22
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:52:27
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:52:29
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:52:41
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:52:49
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:52:52
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:04
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:21
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:22
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:23
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:34
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:36
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:38
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:41
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:43
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:51
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:53:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:02
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:03
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:04
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:22
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:23
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:31
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:36
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:40
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:42
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:44
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:50
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:51
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:54
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:54:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:04
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:06
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:11
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:19
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:29
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:31
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:34
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:49
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:55:57
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:10
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:28
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:31
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:36
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:43
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:54
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:56
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:56:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:02
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:24
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:30
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:31
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:32
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:40
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:44
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:45
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:54
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:57:56
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:11
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:24
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:27
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:29
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:32
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:34
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:35
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:38
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:40
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:50
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:57
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:58:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:59:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:59:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:59:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:59:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:59:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:59:30
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:59:37
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:59:41
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:59:44
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:59:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:59:50
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:59:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-11:59:57
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:00
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:11
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:19
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:30
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:41
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:45
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:50
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:56
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:57
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:00:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:06
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:10
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:21
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:29
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:37
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:42
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:44
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:45
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:50
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:51
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:01:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:04
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:19
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:21
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:22
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:27
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:34
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:35
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:38
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:41
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:44
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:02:52
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:00
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:03
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:13
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:21
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:24
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:30
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:35
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:36
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:37
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:43
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:49
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:51
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:52
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:03:54
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:00
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:03
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:13
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:24
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:32
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:42
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:45
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:49
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:04:59
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:03
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:10
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:11
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:13
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:23
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:32
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:34
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:38
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:39
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:40
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:42
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:50
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:05:56
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:00
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:03
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:21
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:27
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:34
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:35
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:45
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:06:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:10
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:23
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:28
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:31
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:36
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:37
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:38
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:42
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:47
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 25/10/2019-12:07:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:07:32
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:07:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:07:44
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:07:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:07:52
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:02
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:04
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:20
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:22
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:38
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:42
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:43
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:45
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:50
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:51
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:54
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:08:58
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:04
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:05
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:06
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:22
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:30
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:31
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:32
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:33
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:36
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:40
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:41
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:45
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:49
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:53
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:54
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:56
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:09:57
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:03
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:08
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:13
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:15
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:19
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:27
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:30
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:34
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:40
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:45
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:49
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:10:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:11:02
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:11:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:11:11
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:11:12
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:11:16
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:11:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:11:21
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:11:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:11:31
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:11:37
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:11:41
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:11:42
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:11:55
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:00
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:02
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:09
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:14
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:18
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:25
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:26
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:27
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:29
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:35
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:37
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:44
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:46
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:48
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:50
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:12:51
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:13:00
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:13:01
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:13:04
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:13:07
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:13:17
+N°-habitacion: 123--Paciente: Juan David-Garcia--Fecha y hora de la alerta: 26/10/2019-18:13:25
