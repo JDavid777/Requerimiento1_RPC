@@ -255,7 +255,7 @@ void cargarUltimasAlertas(AlertaGenerada *enviarAlertaGenerada){
 /**
  * Carga desde el archivo de historial de alertas y parte el registro almacenendo la fecha, hora y puntuacion de la alarta en un array
  * @param registro registro que se carga desde el archivo
- * @retur array que contiene la informacion de la ultima alerta
+ * @return array que contiene la informacion de la ultima alerta
  * */
 char** partirRegistroAlertas(char* registro){
 
@@ -342,7 +342,7 @@ void arterialDiastolica(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,
 	if(paciente->indicadores.frecuenciaCardiaca<minimo || 
 		paciente->indicadores.frecuenciaCardiaca>maximo ){
 		strcpy(indicadoresAlerta[4].indicador,"Presion arterial diastolica");
-		indicadoresAlerta[4].valor=paciente->indicadores.presionArterialSistolica;
+		indicadoresAlerta[4].valor=paciente->indicadores.presionArterialDiastolica;
 		*puntuacion=(int)((int)*puntuacion + 1);
 	}
 	else

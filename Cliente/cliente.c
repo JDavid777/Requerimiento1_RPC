@@ -177,15 +177,16 @@ void ingresarDatosPaciente(Paciente *paciente){
  * Realiza la lectura de los sensores ques estan la habitacion; envia los indicadores cada cierto tiempo.
  * */
 void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
-	srand48(getpid());
+	srand (time(NULL)); 
 	bool_t  *result;
 	bool_t flag=TRUE;
 	char control[5];
-	while(flag==TRUE){
+	char salir[10];
+	while(flag){
 	 	
 		paciente->indicadores.presionArterialDiastolica=rand()%(110-40+1) + 40;
-		paciente->indicadores.frecuenciaCardiaca=rand()%(200+1);
-		paciente->indicadores.frecuenciaRespiratoria=rand()%(60+1);
+		paciente->indicadores.frecuenciaCardiaca=rand()%(200-40)+40;
+		paciente->indicadores.frecuenciaRespiratoria=rand()%(60-5+1) + 5;
 		paciente->indicadores.presionArterialSistolica=rand()%(160-50+1) + 50;
 		paciente->indicadores.saturacionOxigeno=rand()%(110-40+1) + 40;
 		paciente->indicadores.temperatura=drand48()*(44-33)+33;// numero aleatorio entre 33 y 44
@@ -202,7 +203,6 @@ void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
 		printf("\n Saturacion de Oxigeno: %.2f",paciente->indicadores.saturacionOxigeno);
 		printf("\n Temperatura: %.2f",paciente->indicadores.temperatura);
 
-		//printf("Escriba stop para detener lectura de sensores\n");
 		sleep(8);
 		
 	}		
