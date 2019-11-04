@@ -6,19 +6,19 @@ cd ./ServidorNotificaciones
 make clean 
 make
 echo ejecutando Servidor de Notificaciones
-mate-terminal ./servidor
+gnome-terminal  -e "bash -c ./servidor;bash"\
 
 cd ../ServidorAlertas
 make clean
 make
 echo ejecutando Servidor de ServidorAlertas
-mate-terminal ./servidor
+gnome-terminal -e "bash -c ./servidor;bash"\
 
 cd ../Cliente
 make clean
 make
 echo ejecutando Cliente
-gnome-terminal sh cliente
+gnome-terminal -e "bash -c ./cliente "localhost";bash"\
 
 
 

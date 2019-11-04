@@ -43,10 +43,12 @@ void gestion_alertas_1(char *host){
 int main (int argc, char *argv[]){
 	char *host;
 	if (argc < 2) {
-		printf ("usage: %s server_host\n", argv[0]);
-		exit (1);
+		host="localhost";
 	}
-	host = argv[1];
+	else{
+		host = argv[1];
+	}
+	
 	gestion_alertas_1 (host);
 	exit (0);
 }
