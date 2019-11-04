@@ -40,8 +40,6 @@ void gestion_alertas_1(char *host){
 	clnt_destroy (clnt);
 #endif	 /* DEBUG */
 }
-
-
 int main (int argc, char *argv[]){
 	char *host;
 	if (argc < 2) {
@@ -50,32 +48,33 @@ int main (int argc, char *argv[]){
 	}
 	host = argv[1];
 	gestion_alertas_1 (host);
-exit (0);
+	exit (0);
 }
 
 /**
  * Muestra y gestiona el menu de opciones de el host cliente
  **/
 void menu(Paciente *paciente,CLIENT *clnt){
+	
 	char aux[2];
 	int opcion=0;
 	bool_t flag=FALSE;
 	do{
 			
-			printf("\n|***************|-MENU-|**************|  \n");
-			printf("|-1. Ingresar datos del paciente      |\n");
-			printf("|-2. Comenzar lectura de los sensores |\n");
-			printf("|-3. Terminar                         |\n");
-			printf("|*************************************|\n");
-			printf("Seleccione una opcion: \n ->");
-			fgets(aux,2,stdin);
-			strtok(aux,"\n");
-			//limpiarStdin();
-			opcion=atoi(aux);
-			if (opcion>0)
+		printf("\n|***************|-MENU-|**************|  \n");
+		printf("|-1. Ingresar datos del paciente      |\n");
+		printf("|-2. Comenzar lectura de los sensores |\n");
+		printf("|-3. Terminar                         |\n");
+		printf("|*************************************|\n");
+		printf("Seleccione una opcion: \n ->");
+		fgets(aux,2,stdin);
+		strtok(aux,"\n");
+		//limpiarStdin();
+		opcion=atoi(aux);
+		if (opcion>0)
+		{
+			switch (opcion)
 			{
-				switch (opcion)
-				{
 				case 1:
 					if (flag==FALSE)
 					{
@@ -90,8 +89,7 @@ void menu(Paciente *paciente,CLIENT *clnt){
 						{
 							ingresarDatosPaciente(paciente);
 						}
-					}	 
-					
+					}					
 					break;
 				case 2: 
 					if (flag==TRUE)
@@ -99,7 +97,7 @@ void menu(Paciente *paciente,CLIENT *clnt){
 					else
 						printf("ALERTA! \nDebe Ingresar los datos del paciente de la habitacion\n");
 					break;
-				case 3: printf("Saliendo...");break;
+				case 3:break;
 
 				default: printf("Opcion no valida.\n por favor ingresar una opcion correcta\n");			
 				}		
@@ -107,11 +105,9 @@ void menu(Paciente *paciente,CLIENT *clnt){
 			else
 			{
 				printf("¡No selecciono nada.!\n");	
-			}
-			
+			}	
 	}
 	while(opcion!=3);
-	
 }
 /**
  * Funcion que permite el registro del paciente;
@@ -181,7 +177,9 @@ void ingresarDatosPaciente(Paciente *paciente){
 void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
 	srand48(getpid());
 	bool_t  *result;
-	while(TRUE){
+	bool_t flag=TRUE;
+	char control[5];
+	while(flag==TRUE){
 	 	
 		paciente->indicadores.presionArterialDiastolica=rand()%(110-40+1) + 40;
 		paciente->indicadores.frecuenciaCardiaca=rand()%(200+1);
@@ -201,8 +199,9 @@ void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
 		printf("\n Presion Arterial Sistolica: %.2f",paciente->indicadores.presionArterialSistolica);
 		printf("\n Saturacion de Oxigeno: %.2f",paciente->indicadores.saturacionOxigeno);
 		printf("\n Temperatura: %.2f",paciente->indicadores.temperatura);
-		
-		sleep(1);
+
+		//printf("Escriba stop para detener lectura de sensores\n");
+		sleep(8);
 		
 	}		
 } 
@@ -213,21 +212,21 @@ void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
  * @return array con la fecha partida
  **/
 int* partirFecha(char *fecha){
-   int *resultFecha;
-   int idx=0;
-   resultFecha=malloc(3);
+
+    int *resultFecha;
+    int idx=0;
+    resultFecha=malloc(3);
     char delimitador[] = "/";
     char *token = strtok(fecha, delimitador);
     if(token != NULL){
         for (int i=0; i<3;i++)
         {
-              int aux=atoi(token);
+             int aux=atoi(token);
             resultFecha[idx]=aux;
             token = strtok(NULL, delimitador);
             idx++;
         }   
     }
-	
 	return resultFecha;
 }
 
@@ -250,8 +249,8 @@ char* calcularEdad(char *fecha){
     strftime(fechaActual, MAXNOM, "%d/%m/%Y", tm);
 	int *fechaAct=partirFecha(fechaActual);
 	int* fechaNac= partirFecha(fecha);
-	if ((fechaNac[2] > 1900 && fechaNac[2] <= fechaAct[2]) && (fechaNac[1] > 0 && fechaNac[1] < 13) && (fechaNac[0] > 0 && fechaNac[0] < 32)){
-		
+
+	if ((fechaNac[2] > 1900 && fechaNac[2] <= fechaAct[2]) && (fechaNac[1] > 0 && fechaNac[1] < 13) && (fechaNac[0] > 0 && fechaNac[0] < 32)){	
 	
 		int anios = fechaAct[2]-fechaNac[2];
 			
@@ -277,12 +276,14 @@ char* calcularEdad(char *fecha){
 		dias=dias-semanas*7;
 		sprintf(buff,"%d-%d-%d-%d",fechaAct[2]-fechaNac[2],meses,semanas,dias); //Años-Meses-Semanas_Dias
 		return buff;
-	
-	 }
+	}
 	 
 	return NULL;
 	
 }
+/**
+ * Limpia la entrada estandar
+ * */
 void limpiarStdin(){
 	char c;
 	while ((c = getchar()) != '\n' && c != EOF);

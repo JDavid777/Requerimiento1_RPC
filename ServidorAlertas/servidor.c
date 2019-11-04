@@ -23,7 +23,8 @@ void arterialDiastolica(Paciente *,IndicadoresAlerta *,float minimo, float maxim
 void generarPuntuacion(Paciente *paciente, AlertaGenerada * enviarAlertaGenerada,int * puntuacion);
 
 bool_t *enviarindicadores_1_svc(Paciente *paciente, struct svc_req *rqstp){
-	printf("\n Ejecutando servidor \n");
+
+	printf("\n -> Servidor de alertas escuchando... \n");
 	static bool_t result;
 	CLIENT *clnt;
 	AlertaGenerada  enviarAlertaGenerada;
@@ -52,10 +53,14 @@ bool_t *enviarindicadores_1_svc(Paciente *paciente, struct svc_req *rqstp){
 
 	return &result;
 }
-
+/**
+ * Genera la puntuacion de un paciente segun los criterios medicos
+ * */
 void generarPuntuacion(Paciente *paciente, AlertaGenerada * enviarAlertaGenerada,int * puntuacion){
+	
 	int grupo = obtenerGrupo(enviarAlertaGenerada,paciente->edad);
 	IndicadoresAlerta listIndicadores[5];
+
 	if(paciente->indicadores.saturacionOxigeno<90){
 		puntuacion++;
 	}
@@ -132,6 +137,10 @@ void generarPuntuacion(Paciente *paciente, AlertaGenerada * enviarAlertaGenerada
 	enviarAlertaGenerada->indicadoresAlerta[4].valor=listIndicadores[4].valor;
 
 }
+/**
+ * Valida la puntuacion que obtuvo un paciente para generar o no una alerta, 
+ * almacena en un historial de alertas y envia la alerta al ervidor de notificaciones
+ **/
 void generarAlerta(int puntuacion,AlertaGenerada *enviarAlertaGenerada,CLIENT *clnt){
 
 	bool_t *result;
@@ -169,16 +178,22 @@ void generarAlerta(int puntuacion,AlertaGenerada *enviarAlertaGenerada,CLIENT *c
 
 		printf("\n\n         ALERTA GENERADA        ");
 
-		printf("\n \n ->!ENVIANDO ALERTA...¡");
+		printf("\n  ->!ENVIANDO ALERTA...¡");
 
 		result = enviarnotificacion_2(enviarAlertaGenerada, clnt);
 			
 		if (result == (bool_t *) NULL) {
 			clnt_perror (clnt, "call failed");
 		}
-		printf("\n \n ->!ALERTA ENVIADA CON EXITO...¡");
+		else{
+			printf("\n  ->!ALERTA ENVIADA CON EXITO...¡");
+		}
+		
 	}
 }
+/**
+ * Almacena en un archivo la informacion de una alerta generada
+ * */
 void guardarHistoria(char *buffer){
 
 	FILE *archivo;
@@ -189,23 +204,24 @@ void guardarHistoria(char *buffer){
 		printf("Error al abrir el archivo");
 	} 		
 	else
-	{
-		
+	{	
 		fputs(buffer,archivo);
 		printf("\n ->Alerta guardada exitosamente.\n");
 		fclose(archivo);
 	}
 }
+/**
+ * Lee las ultimas cinco alertas que se generaron a un paciente expecifico
+ **/
 void cargarUltimasAlertas(AlertaGenerada *enviarAlertaGenerada){
 
-	static int numAlertas=0;
+	static int numAlertas=0; //contep de alertas
 	FILE *archivo;
 	char numHabitacion[100];
 	char* buffer;
     char** alertaLeida;
 	buffer=malloc(sizeof(char)*100);
-
-				
+		
 	sprintf(numHabitacion,"%d", enviarAlertaGenerada->paciente.numHabitacion);
 
 	archivo= fopen("historialDeAlertas.txt","r");
@@ -221,30 +237,31 @@ void cargarUltimasAlertas(AlertaGenerada *enviarAlertaGenerada){
 			fgets(buffer,100,archivo);
              
 			if (strncmp(numHabitacion,buffer,3)==0)
-			{
-				printf("%s\n",buffer);
-				
-              alertaLeida=partirRegistroAlertas(buffer);
+			{	
+             	 alertaLeida=partirRegistroAlertas(buffer);
 		
-			  if (numAlertas==4){ numAlertas=0;}
+			  	if (numAlertas==4){ numAlertas=0;}
 				strcpy(enviarAlertaGenerada->ultimasAlertas[numAlertas].fecha,alertaLeida[0]);
 				strcpy(enviarAlertaGenerada->ultimasAlertas[numAlertas].hora,alertaLeida[1]);
 				enviarAlertaGenerada->ultimasAlertas[numAlertas].puntuacion=atoi(alertaLeida[2]);
 				numAlertas++;				
 			}
-			strcpy(buffer,"");
-			
+			strcpy(buffer,"");	//clear buffer
 		}
 		fclose(archivo);
-	numAlertas=0;
-	
+		numAlertas=0;
 	}
 }
+/**
+ * Carga desde el archivo de historial de alertas y parte el registro almacenendo la fecha, hora y puntuacion de la alarta en un array
+ * @param registro registro que se carga desde el archivo
+ * @retur array que contiene la informacion de la ultima alerta
+ * */
 char** partirRegistroAlertas(char* registro){
 
-   int idx=0;
-   char** buf;
-   buf=(char**)malloc(sizeof(char*)*3);
+    int idx=0;
+    char** buf;
+    buf=(char**)malloc(sizeof(char*)*3);
     char delimitador[] = "-";
     char *token = strtok(registro,"\n");
 		
@@ -255,19 +272,14 @@ char** partirRegistroAlertas(char* registro){
             token = strtok(NULL, delimitador);
 			if (i>=1)
 			{
-                buf[idx]=token;
-				 
+                buf[idx]=token; 
             	idx++;
 			}
-        }
-          
-    }
-
-
-	
+        }   
+    }	
 	return buf;
 }
-
+//Validadores de indicadores: Verifican que los valores esten en un rango normal, si no, se aumenta la puntuacion para su posterior analisis
 void frecuenciaCardiaca(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,float minimo, float maximo,int *puntuacion){
 
 	if(paciente->indicadores.frecuenciaCardiaca<minimo || paciente->indicadores.frecuenciaCardiaca>maximo ){
@@ -275,7 +287,7 @@ void frecuenciaCardiaca(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,
 		indicadoresAlerta[0].valor=paciente->indicadores.frecuenciaCardiaca;	
 		*puntuacion=(int)((int)*puntuacion + 1);
 	}
-		else
+	else
 	{
 		indicadoresAlerta[0].valor=0;	
 	}
@@ -289,10 +301,11 @@ void frecuenciaRespiratoria(Paciente *argp,IndicadoresAlerta *indicadoresAlerta,
 		*puntuacion=(int)((int)*puntuacion + 1);
 			
 	}
-		else
+	else
 	{
 		indicadoresAlerta[1].valor=0;	
-	}}
+	}
+}
 void Temperatura(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,float minimo, float maximo,int *puntuacion){
 
 		
@@ -319,10 +332,11 @@ void arterialSistolica(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,f
 		indicadoresAlerta[3].valor=paciente->indicadores.presionArterialSistolica;
 		*puntuacion=(int)((int)*puntuacion + 1);
 	}
-		else
+	else
 	{
 		indicadoresAlerta[3].valor=0;	
-	}}
+	}
+}
 void arterialDiastolica(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,float minimo, float maximo,int *puntuacion){
 	
 	if(paciente->indicadores.frecuenciaCardiaca<minimo || 
@@ -331,10 +345,15 @@ void arterialDiastolica(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,
 		indicadoresAlerta[4].valor=paciente->indicadores.presionArterialSistolica;
 		*puntuacion=(int)((int)*puntuacion + 1);
 	}
-		else
+	else
 	{
 		indicadoresAlerta[4].valor=0;	
-	}}
+	}
+}
+//--------------------------------------------------------------------------------------------------------------------------------
+/**
+ * Obtiene el grupo al que pertenece un paciente ya sea adulto, joven, niño, infante
+ * */
 int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char *edades){
 
 	int *edadExacta=ObtenerEdad(edades);
@@ -397,6 +416,9 @@ int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char *edades){
 	strcpy(enviarAlertaGenerada->paciente.edad,edad);
 	return 7;
 }
+/**
+ * Determina la edad exacta de un paciente
+ * */
 int* ObtenerEdad(char *fecha){
    int *resultFecha;
    int idx=0;
@@ -412,6 +434,5 @@ int* ObtenerEdad(char *fecha){
             idx++;
         }   
     }
-	
 	return resultFecha;
 }
