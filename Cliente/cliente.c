@@ -137,7 +137,7 @@ void ingresarDatosPaciente(Paciente *paciente){
 		fgets(fecha,20,stdin);
 		strtok(fecha,"\n");
 		char *edad=calcularEdad(fecha);
-
+			printf("%s\n", edad);
 		if (edad!=NULL){	
 			strcpy(paciente->edad,edad);
 			free(edad);
@@ -203,7 +203,7 @@ void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
 		printf("\n Temperatura: %.2f",paciente->indicadores.temperatura);
 
 		//printf("Escriba stop para detener lectura de sensores\n");
-		sleep(8);
+		sleep(1);
 		
 	}		
 } 

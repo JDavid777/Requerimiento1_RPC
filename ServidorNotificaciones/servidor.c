@@ -41,7 +41,7 @@ bool_t *enviarnotificacion_2_svc(AlertaGenerada *argp, struct svc_req *rqstp){
 
 	for(int i=0; i<5; i++){
 
-		if (argp->ultimasAlertas[i].puntuacion<10)
+		if (argp->ultimasAlertas[i].puntuacion=!-1)
 		{
 			printf("-> %s	     	  	     %s			      %d\n",argp->ultimasAlertas[i].fecha,argp->ultimasAlertas[i].hora,argp->ultimasAlertas[i].puntuacion);	
 

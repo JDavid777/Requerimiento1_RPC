@@ -18,8 +18,11 @@ cd ../Cliente
 make clean
 make
 echo ejecutando Cliente
-gnome-terminal -e "bash -c ./cliente "localhost";bash"\
+gnome-terminal -e "bash -c ./cliente;bash"\
 
+
+
+cd ..
 
 
 cd ..

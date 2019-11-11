@@ -8,6 +8,7 @@
 #include "notificaciones.h"
 #include <time.h>
 
+void inicializarUltimasAlertas(UltimasAlertas* ultimasAlertas);
 int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char*edades);
 int* ObtenerEdad(char *fecha);
 void guardarHistoria(char* buff);
@@ -137,6 +138,17 @@ void generarPuntuacion(Paciente *paciente, AlertaGenerada * enviarAlertaGenerada
 	enviarAlertaGenerada->indicadoresAlerta[4].valor=listIndicadores[4].valor;
 
 }
+
+void inicializarUltimasAlertas(UltimasAlertas* ultimasAlertas){
+	for (size_t i = 0; i < 5; i++)
+	{
+		strcpy(ultimasAlertas->fecha,"dd/mm/yyyy");
+		strcpy(ultimasAlertas->hora,"h/m/s");
+		ultimasAlertas->puntuacion=-1;
+
+	}
+	
+}
 /**
  * Valida la puntuacion que obtuvo un paciente para generar o no una alerta, 
  * almacena en un historial de alertas y envia la alerta al ervidor de notificaciones
@@ -173,6 +185,7 @@ void generarAlerta(int puntuacion,AlertaGenerada *enviarAlertaGenerada,CLIENT *c
 		guardarHistoria(buff);
 		free(buff);
 		
+		inicializarUltimasAlertas(enviarAlertaGenerada->ultimasAlertas);
 		cargarUltimasAlertas(enviarAlertaGenerada);
 		
 
@@ -356,6 +369,7 @@ void arterialDiastolica(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,
  * */
 int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char *edades){
 
+	int flagRetorno=0;
 	int *edadExacta=ObtenerEdad(edades);
 	char *edad;
 	edad=malloc(sizeof(char)*MAXNOM);
@@ -371,10 +385,10 @@ int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char *edades){
 			strcpy(enviarAlertaGenerada->paciente.edad,edad);
 		}
 		
-		return 1;
+		flagRetorno=1;
 	}
 	// 1 año
-	if(edadExacta[0]<=1){
+	else if(edadExacta[0]<=1){
 		if (edadExacta[1]==0)
 		{
 			sprintf(edad,"%d Semanas y %d dias",edadExacta[2],edadExacta[3]);
@@ -384,55 +398,59 @@ int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char *edades){
 			sprintf(edad,"%d Meses con %d Semanas y %d dias",edadExacta[1],edadExacta[2],edadExacta[3]);
 			strcpy(enviarAlertaGenerada->paciente.edad,edad);
 		}
-		return 2;
+		flagRetorno=2;
 	}
 	// 2 años
-	if(edadExacta[0]<=2){
+	else if(edadExacta[0]<=2){
 		sprintf(edad,"%d Años",edadExacta[0]);
 		strcpy(enviarAlertaGenerada->paciente.edad,edad);
-		return 3;
+		flagRetorno=3;
 	}
 	// 6 años
-		if(edadExacta[0]<=6){
+		else if(edadExacta[0]<=6){
 		sprintf(edad,"%d Años",edadExacta[0]);
 		strcpy(enviarAlertaGenerada->paciente.edad,edad);
-		return 4;
+		flagRetorno=4;
 	}
 	//13 años
-		if(edadExacta[0]<=13){
+		else if(edadExacta[0]<=13){
 		sprintf(edad,"%d Años",edadExacta[0]);
 		strcpy(enviarAlertaGenerada->paciente.edad,edad);
-		return 5;
+		flagRetorno=5;
 	}
 	// 16 años
-		if(edadExacta[0]<=16){
+		else if(edadExacta[0]<=16){
 		sprintf(edad,"%d Años",edadExacta[0]);
 		strcpy(enviarAlertaGenerada->paciente.edad,edad);
-		return 6;
+		flagRetorno=6;
 	}
+	else{
 
-	//mayores a 16
-	sprintf(edad,"%d Años",edadExacta[0]);
-	strcpy(enviarAlertaGenerada->paciente.edad,edad);
-	return 7;
+		//mayores a 16
+		sprintf(edad,"%d Años",edadExacta[0]);
+		strcpy(enviarAlertaGenerada->paciente.edad,edad);
+		flagRetorno=7;
+	}
+	return flagRetorno;
+
 }
 /**
  * Determina la edad exacta de un paciente
  * */
 int* ObtenerEdad(char *fecha){
    int *resultFecha;
-   int idx=0;
    resultFecha=malloc(4);
     char delimitador[] = "-";
     char *token = strtok(fecha, delimitador);
     if(token != NULL){
-        for (int i=0; i<3;i++)
+        for (int i=0; i<4;i++)
         {
             int aux=atoi(token);
-            resultFecha[idx]=aux;
+            resultFecha[i]=aux;
             token = strtok(NULL, delimitador);
-            idx++;
         }   
     }
+	
+	
 	return resultFecha;
 }
