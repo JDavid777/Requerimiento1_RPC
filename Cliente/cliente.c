@@ -280,6 +280,7 @@ char* calcularEdad(char *fecha){
 			meses = fechaAct[1] - fechaNac[1]; //Se le resta año nacimiento al actual
 
 		semanas=dias/7;
+		dias=semanas*7-dias;
 		sprintf(buff,"%d-%d-%d-%d",anios,meses,semanas,dias); //Años-Meses-Semanas-Dias
 		return buff;
 	}
