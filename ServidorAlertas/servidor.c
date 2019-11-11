@@ -45,6 +45,9 @@ bool_t *enviarindicadores_1_svc(Paciente *paciente, struct svc_req *rqstp){
 	enviarAlertaGenerada.paciente.numHabitacion=paciente->numHabitacion;
 	generarPuntuacion(paciente,&enviarAlertaGenerada,&puntuacion);
 	generarAlerta(puntuacion,&enviarAlertaGenerada,clnt);
+
+
+
 	
 	
 #ifndef	DEBUG
@@ -170,11 +173,23 @@ void generarAlerta(int puntuacion,AlertaGenerada *enviarAlertaGenerada,CLIENT *c
 		sprintf(buff,"%d-%s %s-%s-%s-%d\n",enviarAlertaGenerada->paciente.numHabitacion,
 		enviarAlertaGenerada->paciente.nombres,enviarAlertaGenerada->paciente.apellidos,
 		enviarAlertaGenerada->paciente.fecha,enviarAlertaGenerada->paciente.hora,puntuacion);
+
+
+
+
+		
 		guardarHistoria(buff);
 		free(buff);
+		for (int i = 0; i < 5; i++)
+		{
+			enviarAlertaGenerada->ultimasAlertas[i].puntuacion=-1;
+		}
 		
 		cargarUltimasAlertas(enviarAlertaGenerada);
-		
+		for (int i = 0; i < 5; i++)
+		{
+			printf("\n%d ",enviarAlertaGenerada->ultimasAlertas[i].puntuacion);
+		}
 
 		printf("\n\n         ALERTA GENERADA        ");
 
@@ -240,7 +255,7 @@ void cargarUltimasAlertas(AlertaGenerada *enviarAlertaGenerada){
 			{	
              	 alertaLeida=partirRegistroAlertas(buffer);
 		
-			  	if (numAlertas==4){ numAlertas=0;}
+			  	if (numAlertas==5){ numAlertas=0;}
 				strcpy(enviarAlertaGenerada->ultimasAlertas[numAlertas].fecha,alertaLeida[0]);
 				strcpy(enviarAlertaGenerada->ultimasAlertas[numAlertas].hora,alertaLeida[1]);
 				enviarAlertaGenerada->ultimasAlertas[numAlertas].puntuacion=atoi(alertaLeida[2]);
@@ -363,7 +378,7 @@ int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char *edades){
 	if(edadExacta[0]==0 && edadExacta[1]==0 && edadExacta[2]<=6){
 		if (edadExacta[2]==0)
 		{
-			sprintf(edad,"%d Dias",edadExacta[2]);
+			sprintf(edad,"%d Dias",edadExacta[3]);
 			strcpy(enviarAlertaGenerada->paciente.edad,edad);
 		}
 		else{
@@ -421,17 +436,16 @@ int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char *edades){
  * */
 int* ObtenerEdad(char *fecha){
    int *resultFecha;
-   int idx=0;
    resultFecha=malloc(4);
     char delimitador[] = "-";
     char *token = strtok(fecha, delimitador);
     if(token != NULL){
-        for (int i=0; i<3;i++)
+        for (int i=0; i<=3;i++)
         {
+			
             int aux=atoi(token);
-            resultFecha[idx]=aux;
+            resultFecha[i]=aux;
             token = strtok(NULL, delimitador);
-            idx++;
         }   
     }
 	return resultFecha;

@@ -137,7 +137,6 @@ void ingresarDatosPaciente(Paciente *paciente){
 		fgets(fecha,20,stdin);
 		strtok(fecha,"\n");
 		char *edad=calcularEdad(fecha);
-
 		if (edad!=NULL){	
 			strcpy(paciente->edad,edad);
 			free(edad);
@@ -256,14 +255,20 @@ char* calcularEdad(char *fecha){
 	
 		int anios = fechaAct[2]-fechaNac[2];
 			
-		if ( fechaAct[2] < fechaNac[2]  )
+		/*if ( fechaAct[2] < fechaNac[2]  )
 		{   //En caso de ser menor la fecha actual que el nacimiento
 			fechaAct[2] = fechaAct[2] + 30; // Se le suma los 30 días (1 mes) a la fecha actual
 			fechaAct[1] = fechaAct[1] - 1; // Se le resta un mes (30 días) al mes actual
 			dias =  fechaAct[2] - fechaNac[2]; //Se le resta fecha nacimiento al actual
-		}
-		else //En caso de ser mayor la fecha actual que el nacimiento
+		}else //En caso de ser mayor la fecha actual que el nacimiento
 			dias =  fechaAct[2] - fechaNac[2];  //Se le resta fecha nacimiento al actual
+		*/
+
+		if ( fechaAct[0] <= fechaNac[0]  )
+		{   
+			dias = fechaNac[0]-fechaAct[0];
+		}else //En caso de ser mayor la fecha actual que el nacimiento
+			dias =  fechaAct[0] - fechaNac[0];  //Se le resta fecha nacimiento al actual
 
 		if( fechaAct[1] < fechaNac[1] )
 		{   //En caso de ser menor el mes actual que el nacimiento
@@ -275,8 +280,7 @@ char* calcularEdad(char *fecha){
 			meses = fechaAct[1] - fechaNac[1]; //Se le resta año nacimiento al actual
 
 		semanas=dias/7;
-		dias=dias-semanas*7;
-		sprintf(buff,"%d-%d-%d-%d",fechaAct[2]-fechaNac[2],meses,semanas,dias); //Años-Meses-Semanas_Dias
+		sprintf(buff,"%d-%d-%d-%d",anios,meses,semanas,dias); //Años-Meses-Semanas-Dias
 		return buff;
 	}
 	 
