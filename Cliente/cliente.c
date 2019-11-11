@@ -177,6 +177,7 @@ void ingresarDatosPaciente(Paciente *paciente){
  * Realiza la lectura de los sensores ques estan la habitacion; envia los indicadores cada cierto tiempo.
  * */
 void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
+	
 	srand48(getpid());
 	bool_t  *result;
 	bool_t flag=TRUE;
@@ -216,17 +217,15 @@ void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
 int* partirFecha(char *fecha){
 
     int *resultFecha;
-    int idx=0;
     resultFecha=malloc(3);
     char delimitador[] = "/";
     char *token = strtok(fecha, delimitador);
     if(token != NULL){
         for (int i=0; i<3;i++)
         {
-             int aux=atoi(token);
-            resultFecha[idx]=aux;
+            int aux=atoi(token);
+            resultFecha[i]=aux;
             token = strtok(NULL, delimitador);
-            idx++;
         }   
     }
 	return resultFecha;

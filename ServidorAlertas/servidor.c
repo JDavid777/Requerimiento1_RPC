@@ -450,7 +450,5 @@ int* ObtenerEdad(char *fecha){
             token = strtok(NULL, delimitador);
         }   
     }
-	
-	
 	return resultFecha;
 }
