@@ -142,9 +142,9 @@ void generarPuntuacion(Paciente *paciente, AlertaGenerada * enviarAlertaGenerada
 void inicializarUltimasAlertas(UltimasAlertas* ultimasAlertas){
 	for (size_t i = 0; i < 5; i++)
 	{
-		strcpy(ultimasAlertas->fecha,"dd/mm/yyyy");
-		strcpy(ultimasAlertas->hora,"h/m/s");
-		ultimasAlertas->puntuacion=-1;
+		strcpy(ultimasAlertas[i].fecha,"dd/mm/yyyy");
+		strcpy(ultimasAlertas[i].hora,"h/m/s");
+		ultimasAlertas[i].puntuacion=-1;
 
 	}
 	
