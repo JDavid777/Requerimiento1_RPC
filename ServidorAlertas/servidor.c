@@ -186,10 +186,7 @@ void generarAlerta(int puntuacion,AlertaGenerada *enviarAlertaGenerada,CLIENT *c
 		}
 		
 		cargarUltimasAlertas(enviarAlertaGenerada);
-		for (int i = 0; i < 5; i++)
-		{
-			printf("\n%d ",enviarAlertaGenerada->ultimasAlertas[i].puntuacion);
-		}
+
 
 		printf("\n\n         ALERTA GENERADA        ");
 
