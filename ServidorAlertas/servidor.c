@@ -44,6 +44,7 @@ bool_t *enviarindicadores_1_svc(Paciente *paciente, struct svc_req *rqstp){
 	strcpy(enviarAlertaGenerada.paciente.nombres,paciente->nombres);
 	strcpy(enviarAlertaGenerada.paciente.apellidos,paciente->apellidos);
 	enviarAlertaGenerada.paciente.numHabitacion=paciente->numHabitacion;
+	strcpy(enviarAlertaGenerada.paciente.apellidos,paciente->apellidos);
 	generarPuntuacion(paciente,&enviarAlertaGenerada,&puntuacion);
 	generarAlerta(puntuacion,&enviarAlertaGenerada,clnt);
 	
@@ -377,7 +378,7 @@ int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char *edades){
 	if(edadExacta[0]==0 && edadExacta[1]==0 && edadExacta[2]<=6){
 		if (edadExacta[2]==0)
 		{
-			sprintf(edad,"%d Dias",edadExacta[2]);
+			sprintf(edad,"%d Dias",edadExacta[3]);
 			strcpy(enviarAlertaGenerada->paciente.edad,edad);
 		}
 		else{
@@ -448,6 +449,7 @@ int* ObtenerEdad(char *fecha){
             int aux=atoi(token);
             resultFecha[i]=aux;
             token = strtok(NULL, delimitador);
+			
         }   
     }
 	return resultFecha;

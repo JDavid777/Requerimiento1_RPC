@@ -253,16 +253,16 @@ char* calcularEdad(char *fecha){
 
 	if ((fechaNac[2] > 1900 && fechaNac[2] <= fechaAct[2]) && (fechaNac[1] > 0 && fechaNac[1] < 13) && (fechaNac[0] > 0 && fechaNac[0] < 32)){	
 	
-		int anios = fechaAct[2]-fechaNac[2];
+		
 			
-		if ( fechaAct[2] < fechaNac[2]  )
+		if ( fechaAct[0] <fechaNac[0]  )
 		{   //En caso de ser menor la fecha actual que el nacimiento
-			fechaAct[2] = fechaAct[2] + 30; // Se le suma los 30 días (1 mes) a la fecha actual
+			fechaAct[0] = fechaAct[0] + 30; // Se le suma los 30 días (1 mes) a la fecha actual
 			fechaAct[1] = fechaAct[1] - 1; // Se le resta un mes (30 días) al mes actual
-			dias =  fechaAct[2] - fechaNac[2]; //Se le resta fecha nacimiento al actual
+			dias =  fechaAct[0] - fechaNac[0]; //Se le resta fecha nacimiento al actual
 		}
 		else //En caso de ser mayor la fecha actual que el nacimiento
-			dias =  fechaAct[2] - fechaNac[2];  //Se le resta fecha nacimiento al actual
+			dias =  fechaAct[0] - fechaNac[0];  //Se le resta fecha nacimiento al actual
 
 		if( fechaAct[1] < fechaNac[1] )
 		{   //En caso de ser menor el mes actual que el nacimiento
@@ -273,9 +273,10 @@ char* calcularEdad(char *fecha){
 		else //En caso de ser mayor el mes actual que el nacimiento
 			meses = fechaAct[1] - fechaNac[1]; //Se le resta año nacimiento al actual
 
+		int anios = fechaAct[2]-fechaNac[2];
 		semanas=dias/7;
 		dias=dias-semanas*7;
-		sprintf(buff,"%d-%d-%d-%d",fechaAct[2]-fechaNac[2],meses,semanas,dias); //Años-Meses-Semanas_Dias
+		sprintf(buff,"%d-%d-%d-%d",anios,meses,semanas,dias); //Años-Meses-Semanas_Dias
 		return buff;
 	}
 	 
