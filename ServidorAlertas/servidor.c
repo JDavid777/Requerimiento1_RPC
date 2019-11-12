@@ -188,7 +188,7 @@ void generarAlerta(int puntuacion,AlertaGenerada *enviarAlertaGenerada,CLIENT *c
 		strcpy(enviarAlertaGenerada->paciente.fecha,fechaAlerta); // fecha en que se genero la alerta
 		strcpy(enviarAlertaGenerada->paciente.hora,horaAlerta);  // hora actual 
 		
-		sprintf(buff,"%d-%s %s-%s-%s-%d\n",enviarAlertaGenerada->paciente.numHabitacion,
+		sprintf(buff,"%d,%s %s,%s,%s,%d\n",enviarAlertaGenerada->paciente.numHabitacion,
 		enviarAlertaGenerada->paciente.nombres,enviarAlertaGenerada->paciente.apellidos,
 		enviarAlertaGenerada->paciente.fecha,enviarAlertaGenerada->paciente.hora,puntuacion);
 		guardarHistoria(buff);
@@ -284,7 +284,7 @@ char** partirRegistroAlertas(char* registro){
     int idx=0;
     char** buf;
     buf=(char**)malloc(sizeof(char*)*3);
-    char delimitador[] = "-";
+    char delimitador[] = ",";
     char *token = strtok(registro,"\n");
 		
     token = strtok(registro, delimitador);

@@ -58,7 +58,7 @@ int main (int argc, char *argv[]){
  **/
 void menu(Paciente *paciente,CLIENT *clnt){
 	
-	char aux[10];
+	char aux[2];
 	int opcion=0;
 	bool_t flag=FALSE;
 	do{
@@ -69,7 +69,7 @@ void menu(Paciente *paciente,CLIENT *clnt){
 		printf("|-3. Terminar                         |\n");
 		printf("|*************************************|\n");
 		printf("Seleccione una opcion: \n ->");
-		fgets(aux,10,stdin);
+		fgets(aux,2,stdin);
 		strtok(aux,"\n");
 		//limpiarStdin();
 		opcion=atoi(aux);
