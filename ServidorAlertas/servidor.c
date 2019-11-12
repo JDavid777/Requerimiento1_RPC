@@ -275,24 +275,28 @@ void cargarUltimasAlertas(AlertaGenerada *enviarAlertaGenerada){
 	}
 }
 /**
- * Carga desde el archivo de historial de alertas y parte el registro almacenendo la fecha, hora y puntuacion de la alarta en un array
+ * Carga desde el archivo de historial de alertas y parte el registro almacenendo la fecha,
+ *  hora y puntuacion de la alarta en un array. En caso de agregar un campo se recomienda hacerlo antes de la fecha para no modificar tanto la funcion
  * @param registro registro que se carga desde el archivo
  * @retur array que contiene la informacion de la ultima alerta
  * */
 char** partirRegistroAlertas(char* registro){
-
+	// Organzacion del registro: [ habitacion, nombres apellidos, fecha, hora, puntuacion]
+	//									0		      1			    2	  3        4      
     int idx=0;
     char** buf;
     buf=(char**)malloc(sizeof(char*)*3);
     char delimitador[] = ",";
     char *token = strtok(registro,"\n");
 		
-    token = strtok(registro, delimitador);
+    token = strtok(registro, delimitador);// se saca la primer ocurrencia antes de el delimitador; la posicion 0
     if(token != NULL){
-        for (int i=0; i<4;i++)
+		//  estructura del registro con la que inicia el for [ nombres apellidos, fecha, hora, puntuacion]
+		//                                                             0            1      2     3
+        for (int i=0; i<4;i++) //El for itera hasta 3 para alcanzar hasta la posicion de la puntuacion y no se desborde; aumentar limite en caso de agregar un campo al registro
         {
             token = strtok(NULL, delimitador);
-			if (i>=1)
+			if (i>=1)// se ignora el registro 0 nombre y apellidos y se agregan solo fecha, hora, puntuacion
 			{
                 buf[idx]=token; 
             	idx++;
