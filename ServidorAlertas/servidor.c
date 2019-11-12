@@ -8,7 +8,9 @@
 #include "notificaciones.h"
 #include <time.h>
 
+//DECLARACION DE LAS FUNCIONES Y PROCEDIMIENTOS LOCALES
 void inicializarUltimasAlertas(UltimasAlertas* ultimasAlertas);
+void inicializarIndicadoresAlerta(IndicadoresAlerta* indicadoresAlerta);
 int obtenerGrupo(AlertaGenerada *enviarAlertaGenerada, char*edades);
 int* ObtenerEdad(char *fecha);
 void guardarHistoria(char* buff);
@@ -61,7 +63,7 @@ bool_t *enviarindicadores_1_svc(Paciente *paciente, struct svc_req *rqstp){
 void generarPuntuacion(Paciente *paciente, AlertaGenerada * enviarAlertaGenerada,int * puntuacion){
 	
 	int grupo = obtenerGrupo(enviarAlertaGenerada,paciente->edad);
-	IndicadoresAlerta listIndicadores[5];
+	inicializarIndicadoresAlerta(enviarAlertaGenerada->indicadoresAlerta);
 
 	if(paciente->indicadores.saturacionOxigeno<90){
 		puntuacion++;
@@ -69,77 +71,70 @@ void generarPuntuacion(Paciente *paciente, AlertaGenerada * enviarAlertaGenerada
 	switch (grupo)
 	{
 		case 1:
-			frecuenciaCardiaca(paciente,listIndicadores,120,140,puntuacion);
-			frecuenciaRespiratoria(paciente,listIndicadores,40,45,puntuacion);		
-			Temperatura(paciente,listIndicadores,38,38,puntuacion);
-			arterialSistolica(paciente,listIndicadores,70,100,puntuacion);
-			arterialDiastolica(paciente,listIndicadores,50,68,puntuacion);
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada->indicadoresAlerta,120,140,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada->indicadoresAlerta,40,45,puntuacion);		
+			Temperatura(paciente,enviarAlertaGenerada->indicadoresAlerta,38,38,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada->indicadoresAlerta,70,100,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada->indicadoresAlerta,50,68,puntuacion);
 			break;
 
 		case 2:
-			frecuenciaCardiaca(paciente,listIndicadores,100,130,puntuacion);
-			frecuenciaRespiratoria(paciente,listIndicadores,20,30,puntuacion);
-			Temperatura(paciente,listIndicadores,37.5,37.8,puntuacion);
-			arterialSistolica(paciente,listIndicadores,84,106,puntuacion);
-			arterialDiastolica(paciente,listIndicadores,56,70,puntuacion);
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada->indicadoresAlerta,100,130,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada->indicadoresAlerta,20,30,puntuacion);
+			Temperatura(paciente,enviarAlertaGenerada->indicadoresAlerta,37.5,37.8,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada->indicadoresAlerta,84,106,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada->indicadoresAlerta,56,70,puntuacion);
 			break;
 
 		case 3:
-			frecuenciaCardiaca(paciente,listIndicadores,100,120,puntuacion);
-			frecuenciaRespiratoria(paciente,listIndicadores,20,30,puntuacion);
-			Temperatura(paciente,listIndicadores,37.5,37.8,puntuacion);
-			arterialSistolica(paciente,listIndicadores,98,106,puntuacion);
-			arterialDiastolica(paciente,listIndicadores,56,70,puntuacion);
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada->indicadoresAlerta,100,120,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada->indicadoresAlerta,20,30,puntuacion);
+			Temperatura(paciente,enviarAlertaGenerada->indicadoresAlerta,37.5,37.8,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada->indicadoresAlerta,98,106,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada->indicadoresAlerta,56,70,puntuacion);
 			break;
 
 		case 4:
-			frecuenciaCardiaca(paciente,listIndicadores,80,120,puntuacion);
-			frecuenciaRespiratoria(paciente,listIndicadores,20,30,puntuacion);
-			Temperatura(paciente,listIndicadores,37.5,37.8,puntuacion);
-			arterialSistolica(paciente,listIndicadores,99,112,puntuacion);
-			arterialDiastolica(paciente,listIndicadores,64,70,puntuacion);
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada->indicadoresAlerta,80,120,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada->indicadoresAlerta,20,30,puntuacion);
+			Temperatura(paciente,enviarAlertaGenerada->indicadoresAlerta,37.5,37.8,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada->indicadoresAlerta,99,112,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada->indicadoresAlerta,64,70,puntuacion);
 			break;
 
 		case 5:
-			frecuenciaCardiaca(paciente,listIndicadores,80,100,puntuacion);
-			frecuenciaRespiratoria(paciente,listIndicadores,12,20,puntuacion);
-			Temperatura(paciente,listIndicadores,37,37.5,puntuacion);
-			arterialSistolica(paciente,listIndicadores,104,124,puntuacion);
-			arterialDiastolica(paciente,listIndicadores,64,86,puntuacion);
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada->indicadoresAlerta,80,100,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada->indicadoresAlerta,12,20,puntuacion);
+			Temperatura(paciente,enviarAlertaGenerada->indicadoresAlerta,37,37.5,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada->indicadoresAlerta,104,124,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada->indicadoresAlerta,64,86,puntuacion);
 			break;
 
 		case 6:
-			frecuenciaCardiaca(paciente,listIndicadores,70,80,puntuacion);
-			frecuenciaRespiratoria(paciente,listIndicadores,12,20,puntuacion);
-			Temperatura(paciente,listIndicadores,37,37,puntuacion);
-			arterialSistolica(paciente,listIndicadores,118,132,puntuacion);
-			arterialDiastolica(paciente,listIndicadores,70,82,puntuacion);
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada->indicadoresAlerta,70,80,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada->indicadoresAlerta,12,20,puntuacion);
+			Temperatura(paciente,enviarAlertaGenerada->indicadoresAlerta,37,37,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada->indicadoresAlerta,118,132,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada->indicadoresAlerta,70,82,puntuacion);
 			break;
 
 		case 7:
-			frecuenciaCardiaca(paciente,listIndicadores,60,80,puntuacion);
-			frecuenciaRespiratoria(paciente,listIndicadores,12,20,puntuacion);	
-			Temperatura(paciente,listIndicadores,36.2,37.2,puntuacion);
-			arterialSistolica(paciente,listIndicadores,110,140,puntuacion);
-			arterialDiastolica(paciente,listIndicadores,70,90,puntuacion);		
+			frecuenciaCardiaca(paciente,enviarAlertaGenerada->indicadoresAlerta,60,80,puntuacion);
+			frecuenciaRespiratoria(paciente,enviarAlertaGenerada->indicadoresAlerta,12,20,puntuacion);	
+			Temperatura(paciente,enviarAlertaGenerada->indicadoresAlerta,36.2,37.2,puntuacion);
+			arterialSistolica(paciente,enviarAlertaGenerada->indicadoresAlerta,110,140,puntuacion);
+			arterialDiastolica(paciente,enviarAlertaGenerada->indicadoresAlerta,70,90,puntuacion);		
 			break;
 		
 		default:
 			break;
 	}
-	strcpy(enviarAlertaGenerada->indicadoresAlerta[0].indicador,listIndicadores[0].indicador);
-	strcpy(enviarAlertaGenerada->indicadoresAlerta[1].indicador,listIndicadores[1].indicador);
-	strcpy(enviarAlertaGenerada->indicadoresAlerta[2].indicador,listIndicadores[2].indicador);
-	strcpy(enviarAlertaGenerada->indicadoresAlerta[3].indicador,listIndicadores[3].indicador);
-	strcpy(enviarAlertaGenerada->indicadoresAlerta[4].indicador,listIndicadores[4].indicador);
-	enviarAlertaGenerada->indicadoresAlerta[0].valor=listIndicadores[0].valor;
-	enviarAlertaGenerada->indicadoresAlerta[1].valor=listIndicadores[1].valor;
-	enviarAlertaGenerada->indicadoresAlerta[2].valor=listIndicadores[2].valor;
-	enviarAlertaGenerada->indicadoresAlerta[3].valor=listIndicadores[3].valor;
-	enviarAlertaGenerada->indicadoresAlerta[4].valor=listIndicadores[4].valor;
 
 }
-
+/**
+ * Inicializa los campos del vector de las ultimas cinco alertas a valores por defecto 
+ * con el objetivo de limpiarlos de valores inconsistentes
+ */
 void inicializarUltimasAlertas(UltimasAlertas* ultimasAlertas){
 	for (size_t i = 0; i < 5; i++)
 	{
@@ -149,6 +144,19 @@ void inicializarUltimasAlertas(UltimasAlertas* ultimasAlertas){
 
 	}
 	
+}
+/**
+ * Inicializa los campos del vector de los indicadores que generaron la alerta a valores por defecto 
+ * con el objetivo de limpiarlos de datos inconsistentes
+ * */
+void inicializarIndicadoresAlerta(IndicadoresAlerta* indicadoresAlerta){
+
+	for (size_t i = 0; i < 5; i++)
+	{
+		strcpy(indicadoresAlerta[i].indicador,"null");
+		indicadoresAlerta[i].valor=-1;
+	}
+
 }
 /**
  * Valida la puntuacion que obtuvo un paciente para generar o no una alerta, 
@@ -254,7 +262,7 @@ void cargarUltimasAlertas(AlertaGenerada *enviarAlertaGenerada){
 			{	
              	 alertaLeida=partirRegistroAlertas(buffer);
 		
-			  	if (numAlertas==4){ numAlertas=0;}
+			  	if (numAlertas==5){ numAlertas=0;}
 				strcpy(enviarAlertaGenerada->ultimasAlertas[numAlertas].fecha,alertaLeida[0]);
 				strcpy(enviarAlertaGenerada->ultimasAlertas[numAlertas].hora,alertaLeida[1]);
 				enviarAlertaGenerada->ultimasAlertas[numAlertas].puntuacion=atoi(alertaLeida[2]);
@@ -297,27 +305,19 @@ char** partirRegistroAlertas(char* registro){
 void frecuenciaCardiaca(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,float minimo, float maximo,int *puntuacion){
 
 	if(paciente->indicadores.frecuenciaCardiaca<minimo || paciente->indicadores.frecuenciaCardiaca>maximo ){
-		strcpy(indicadoresAlerta[0].indicador,"frecuencia cardiaca");
+		strcpy(indicadoresAlerta[0].indicador,"Frecuencia cardiaca     ");//Agregamos espacios en blanco para mejorar la salida por pantalla
 		indicadoresAlerta[0].valor=paciente->indicadores.frecuenciaCardiaca;	
 		*puntuacion=(int)((int)*puntuacion + 1);
-	}
-	else
-	{
-		indicadoresAlerta[0].valor=0;	
 	}
 }
 void frecuenciaRespiratoria(Paciente *argp,IndicadoresAlerta *indicadoresAlerta,float minimo, float maximo,int *puntuacion){
 		
 	if(argp->indicadores.frecuenciaRespiratoria<minimo || 
 		argp->indicadores.frecuenciaCardiaca>maximo ){
-		strcpy(indicadoresAlerta[1].indicador,"frecuencia Respiratoria");
+		strcpy(indicadoresAlerta[1].indicador,"Frecuencia Respiratoria");
 		indicadoresAlerta[1].valor=argp->indicadores.frecuenciaRespiratoria;
 		*puntuacion=(int)((int)*puntuacion + 1);
 			
-	}
-	else
-	{
-		indicadoresAlerta[1].valor=0;	
 	}
 }
 void Temperatura(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,float minimo, float maximo,int *puntuacion){
@@ -325,30 +325,20 @@ void Temperatura(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,float m
 		
 	if(paciente->indicadores.temperatura<minimo || paciente->indicadores.temperatura>maximo ){
 
-		strcpy(indicadoresAlerta[2].indicador,"Temperatura");
+		strcpy(indicadoresAlerta[2].indicador,"Temperatura          ");//Agregamos espacios en blanco para mejorar la salida por pantalla
 		indicadoresAlerta[2].valor=paciente->indicadores.temperatura;
 		*puntuacion=(int)((int)*puntuacion + 1);
 	}	
-	else
-	{
-		indicadoresAlerta[2].valor=0;	
-	}
-		
 	
 }
 void arterialSistolica(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,float minimo, float maximo,int *puntuacion){
-	//Tension arterial sistolica
 	
 	if(paciente->indicadores.frecuenciaCardiaca<minimo || 
 		paciente->indicadores.frecuenciaCardiaca>maximo ){
 					
-		strcpy(indicadoresAlerta[3].indicador,"Presion arterial sistloca");
+		strcpy(indicadoresAlerta[3].indicador,"Presion arterial sistolica");
 		indicadoresAlerta[3].valor=paciente->indicadores.presionArterialSistolica;
 		*puntuacion=(int)((int)*puntuacion + 1);
-	}
-	else
-	{
-		indicadoresAlerta[3].valor=0;	
 	}
 }
 void arterialDiastolica(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,float minimo, float maximo,int *puntuacion){
@@ -356,12 +346,8 @@ void arterialDiastolica(Paciente *paciente,IndicadoresAlerta *indicadoresAlerta,
 	if(paciente->indicadores.frecuenciaCardiaca<minimo || 
 		paciente->indicadores.frecuenciaCardiaca>maximo ){
 		strcpy(indicadoresAlerta[4].indicador,"Presion arterial diastolica");
-		indicadoresAlerta[4].valor=paciente->indicadores.presionArterialSistolica;
+		indicadoresAlerta[4].valor=paciente->indicadores.presionArterialDiastolica;
 		*puntuacion=(int)((int)*puntuacion + 1);
-	}
-	else
-	{
-		indicadoresAlerta[4].valor=0;	
 	}
 }
 //--------------------------------------------------------------------------------------------------------------------------------

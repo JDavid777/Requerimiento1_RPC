@@ -11,7 +11,7 @@
 #include <time.h>
 #include <string.h>
 
-//Funciones Locales
+//DECLARACION DE FUNCIONES Y PROCEDIMIENTOS LOCALES
 
 void limpiarStdin();
 char* calcularEdad(char *fecha);
@@ -58,7 +58,7 @@ int main (int argc, char *argv[]){
  **/
 void menu(Paciente *paciente,CLIENT *clnt){
 	
-	char aux[2];
+	char aux[10];
 	int opcion=0;
 	bool_t flag=FALSE;
 	do{
@@ -69,7 +69,7 @@ void menu(Paciente *paciente,CLIENT *clnt){
 		printf("|-3. Terminar                         |\n");
 		printf("|*************************************|\n");
 		printf("Seleccione una opcion: \n ->");
-		fgets(aux,2,stdin);
+		fgets(aux,10,stdin);
 		strtok(aux,"\n");
 		//limpiarStdin();
 		opcion=atoi(aux);
@@ -101,7 +101,7 @@ void menu(Paciente *paciente,CLIENT *clnt){
 					break;
 				case 3:break;
 
-				default: printf("Opcion no valida.\n por favor ingresar una opcion correcta\n");			
+				default: printf("Opcion no valida.\n por favor seleccione una opcion correcta\n");			
 				}		
 			}
 			else
@@ -137,7 +137,7 @@ void ingresarDatosPaciente(Paciente *paciente){
 		fgets(fecha,20,stdin);
 		strtok(fecha,"\n");
 		char *edad=calcularEdad(fecha);
-			printf("%s\n", edad);
+
 		if (edad!=NULL){	
 			strcpy(paciente->edad,edad);
 			free(edad);
@@ -152,7 +152,7 @@ void ingresarDatosPaciente(Paciente *paciente){
 	while (flag==FALSE)
 	{
 		int habitacion=0;
-		printf("\nNumero Habitacion: ");
+		printf("\nNumero De Habitacion: ");
 		scanf("%d",&habitacion);
 		if (habitacion>100&&habitacion<1000)
 		{
@@ -203,7 +203,6 @@ void comenzarLecturaSensores(Paciente *paciente,CLIENT *clnt){
 		printf("\n Saturacion de Oxigeno: %.2f",paciente->indicadores.saturacionOxigeno);
 		printf("\n Temperatura: %.2f",paciente->indicadores.temperatura);
 
-		//printf("Escriba stop para detener lectura de sensores\n");
 		sleep(1);
 		
 	}		
