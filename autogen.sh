@@ -25,4 +25,3 @@ gnome-terminal -e "bash -c ./cliente;bash"\
 cd ..
 
 
-cd ..
